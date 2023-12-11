@@ -144,8 +144,6 @@ const searchRef = (req, res, next) => {
     let ref_no = req.params.ref_no;
     let contact_no = req.params.contact_no;
 
-    console.log('Full request object:', req);
-
     if (!contact_no || !ref_no) {
         console.log('Missing contact_no or ref_no');
         return res.status(400).json({
@@ -170,33 +168,33 @@ const searchRef = (req, res, next) => {
             });
         }
 
-        console.log('Query result:', rows);
-
         if (rows.length > 0) {
             const appointmentDetails = rows[0];
 
             // Check if the reference number and contact number match
             if (appointmentDetails.contact_no === contact_no && appointmentDetails.ref_no == ref_no) {
+                // Send details in the response
                 return res.status(200).json({
                     successful: true,
                     message: "Successfully get all details",
-                    data: rows
+                    data: appointmentDetails
                 });
             } else {
                 // If the numbers don't match, return appropriate response
                 return res.status(400).json({
                     successful: false,
-                    message: "The credentials dont seem to match, Please try again."
+                    message: "The credentials don't seem to match, Please try again."
                 });
             }
         } else {
             return res.status(404).json({
                 successful: false,
-                message: "The credentials dont seem to match, Please try again."
+                message: "The credentials don't seem to match, Please try again."
             });
         }
     });
 };
+
 
 
 
