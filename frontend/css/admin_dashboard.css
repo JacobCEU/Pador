@@ -1,0 +1,1051 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    
+
+
+}
+
+body{
+
+    display: flex;
+    overflow: auto;
+}
+
+
+.square{
+
+width: 100%;
+height: 450px;
+flex-shrink: 0;
+background: rgba(2, 128, 199, 0.6);
+
+
+
+
+
+
+}
+
+.logo{
+width: 154px;
+height: 151px;
+flex-shrink: 0;
+float: left;
+border-radius: 8px;
+
+    
+}
+
+.pador{
+
+    float: left;
+    padding-top: 50px;
+    padding-left: 20px;
+    width: 306px;
+    color: #FFF;
+    font-family: Suez One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+
+}
+
+.dashboard{
+
+    left: 0;
+    padding-top: 200px;
+    color: #FFF;
+    font-family: Suez One;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 389px;
+}
+
+
+
+
+.drpador{
+    position: absolute;
+    color: #4A4A4A;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: right;
+    right: 0;   
+    margin-right: 48px;
+    padding-top: 22px;
+
+
+    }
+
+    .logo2{
+
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        right: 0;
+        padding-right: 150px;
+    }
+
+
+    .dp{
+
+
+        position: absolute;
+        width: 71px;
+        height: 71px;
+        flex-shrink: 0;
+        right: 0;
+        margin-right: 0px;
+        margin-top: 12px;
+    }
+
+
+    .logout{
+        float: right;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        overflow: visible;
+        margin-top: 25px;
+        margin-right: 18px;
+    }
+
+
+
+
+    .apps {
+
+        position: absolute;
+        color: #FFF;
+        font-family: Suez One;
+        font-size: 35px;
+        font-style: normal;
+        line-height: normal;
+        right: 0;
+        top: 211px;
+        padding-right: 60px;
+    
+    }
+
+    .num{
+
+        text-align: center;
+    }
+
+
+    .rectangle-32 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 390px;
+        margin-left: 456px;
+        
+      }
+
+      .finished-appointments-today {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-left: 50px;
+        padding-top: 25px;
+        
+      }
+
+      ._5 {
+        color: #0280c7;
+        text-align: center;
+        font: 400 50px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 342px;
+        padding-left: 50px;
+        padding-top: 40px;
+      }
+
+      
+    .rectangle-39 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 390px;
+        margin-right: 456px;
+        right: 0;
+        
+      }
+
+      .notifications {
+        color: #4a4a4a;
+        text-align: center;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        position: relative;
+        width: 400px;
+        font-family: Suez One;
+        padding-left: 35px;
+        padding-top: 25px;
+
+        
+      }
+
+      ._2-unread-messages{
+        color: #0280c7;
+        text-align: center;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-top: 45px;
+        text-align: center;
+        padding-left: 35px;
+      }
+
+
+
+      .rectangle-40 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 644px;
+        margin-right: 733px;
+        margin-left: 456px;
+        left: 0;
+      }
+      
+      .available-spots-left-today{
+
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-left: 50px;
+        padding-top: 25px;
+        
+
+
+      }
+
+      
+      ._0 {
+        color: #0280c7;
+        text-align: center;
+        font: 400 50px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 342px;
+        padding-left: 50px;
+        padding-top: 40px;
+      }
+
+      .rectangle-38 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 644px;
+        margin-right: 456px;
+        margin-left: 256px;
+        right: 0;
+      }
+      
+      .upcoming-appointments{
+
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-left: 76px;
+        padding-top: 28px;
+        
+
+
+      }
+
+      
+      ._2 {
+        color: #0280c7;
+        text-align: center;
+        font: 400 50px "Poppins-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 342px;
+        padding-left: 50px;
+        padding-top: 35px;
+      }
+
+
+      .rectangle-37 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #adacac;
+        border-width: 1px;
+        width: 957px;
+        height: 582px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(116, 116, 116, 0.25);
+        margin-top: 990px;
+        right: 468px;
+
+      }
+
+      .today-november-11-2023 {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        margin-left: 44px;
+        margin-top: 19px;
+      }
+
+      .base-chip {
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: relative;
+        margin-left: 707px;
+        margin-top: -30px;
+      }
+      .base-chip2 {
+        background: #0280c7;
+        border-radius: 20px;
+        padding: 0px 12px 0px 12px;
+        display: flex;
+        flex-direction: row;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: 179px;
+        height: 34px;
+        position: relative;
+
+      }
+      .body {
+        color: #ffffff;
+        text-align: left;
+        font: 400 20px/100% "SuezOne-Regular", sans-serif;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+
+      .time {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 128px;
+        top: 17px;
+
+      }
+
+      .service {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 450px;
+        top: -14.52px;
+
+      }
+
+
+      
+      .status {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 734px;
+        right: -23px;
+        top: -51px;
+      }
+
+
+      .pm{
+
+        color: #4a4a4a;
+        text-align: center;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 131px;
+        height: 45px;
+        padding-left: 114px;
+        top: -40.3px;
+        display: grid;        
+        gap: 31px;
+
+
+
+      }
+
+      
+      .services{
+
+        color: #4a4a4a;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 393px;
+        display: grid;        
+        gap: 31px;
+        top: -87.7px;
+
+              
+
+        
+
+
+
+      }
+
+
+      .statuses{
+
+
+        color: #52ff00;
+        text-align: center;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 150px;
+        display: grid;
+        gap: 31px;
+        padding-left: 724px;
+        top: -316px;
+
+
+
+
+
+
+      }
+
+
+      .ongoing{
+
+        color: #ffc907;
+        text-align: center;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 150px;
+
+
+
+
+      }
+
+      .waiting{
+
+        color: #ff0000;
+        text-align: center;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 150px;
+
+
+
+
+      }
+
+      
+      
+      
+      
+      
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+      
+
+
+
+
+      
+      
+      
+    
+    
+    
+
+@media screen and (max-width: 1000px) {
+    .dashboard {
+
+        left: 0;
+    padding-top: 120px;
+    color: #FFF;
+    font-family: Suez One;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding-left: 73px;
+    padding-top: 190px;
+      
+
+    }
+  }
+
+  
+
+  @media  screen and (max-width: 1000px){
+    .logo{
+
+        padding-left: 0;
+        width: 74px;
+        height: 70px; 
+
+
+
+
+    }
+    
+  }
+
+
+  @media screen and (max-width: 1000px) {
+    .pador {
+
+        position: absolute;
+        text-align: left;
+        padding-top: 15px;
+        padding-left: 80px;
+        font-size: 15px;
+
+
+
+
+
+    }
+  }
+
+
+
+
+  @media screen and (max-width: 1000px) {
+    .drpador {
+
+        position: absolute;
+        right: 0;
+        padding-top: 18px;
+        margin-right: 40px;
+
+        font-size: 15px;
+
+
+
+        
+
+
+
+
+
+    }
+
+
+    .logout{
+
+        position: absolute;
+        right: 0;
+        margin-top: 18px;
+        margin-right: 16px;
+
+
+        
+
+
+
+    }
+
+  }
+
+
+
+
+  @media screen and (max-width: 1000px) {
+
+    .apps{
+
+
+        position: absolute;
+        left: 0;
+        font-size: 28px;
+        margin-left: 95px;
+        padding-top: 25px;
+    }
+
+    .num{
+
+
+        position: absolute;
+        font-size: 28px;
+        padding-top: 50px;
+        padding-left: 130px;
+    }
+
+
+  }
+
+  
+
+
+    @media screen and (max-width: 1000px) {
+        .logo2 {
+            position: absolute;
+            width: 39px;
+            height: 35px;
+            right: 0;
+            padding-right: 115px;
+        }
+
+    }
+
+
+    @media screen and (max-width: 1000px) {
+
+        .rectangle-32 {
+            background: #ffffff;
+            border-radius: 20px;
+            border-style: solid;
+            border-color: #8c8c8c;
+            border-width: 1px;
+            width: 451px;
+            height: 195px;
+            position: absolute;
+            box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+            margin-top: 390px;
+            margin-left: 25px;
+            
+          }
+    
+          .finished-appointments-today {
+            color: #4a4a4a;
+            text-align: left;
+            font: 400 25px "SuezOne-Regular", sans-serif;
+            font-family: Suez One;
+            position: relative;
+            width: 400px;
+            padding-left: 50px;
+            padding-top: 25px;
+            
+          }
+    
+          ._5 {
+            color: #0280c7;
+            text-align: center;
+            font: 400 50px "Poppins-Regular", sans-serif;
+            position: relative;
+            width: 342px;
+            padding-left: 50px;
+            padding-top: 40px;
+          }
+          
+
+
+
+    }
+
+
+
+
+    @media screen and (max-width: 1000px) {
+    .rectangle-39 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 600px;
+        left: 25px;
+       
+        
+      }
+
+      .notifications {
+        color: #4a4a4a;
+        text-align: center;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        position: relative;
+        width: 400px;
+        font-family: Suez One;
+        padding-left: 29px;
+        padding-top: 25px;
+
+        
+      }
+
+      ._2-unread-messages{
+        color: #0280c7;
+        text-align: center;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-top: 45px;
+        text-align: center;
+        padding-left: 29px;
+      }
+
+    }
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+    .rectangle-40 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 814px;
+        margin-left: 25px;
+        left: 0;
+      }
+      
+      .available-spots-left-today{
+
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-left: 75px;
+        padding-top: 25px;
+        
+
+
+      }
+
+      
+      ._0 {
+        color: #0280c7;
+        text-align: center;
+        font: 400 50px "Poppins-Regular", sans-serif;
+        position: relative;
+        width: 342px;
+        padding-left: 57px;
+        padding-top: 35px;
+      }
+
+    }
+
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+    .rectangle-38 {
+        background: #ffffff;
+        border-radius: 20px;
+        border-style: solid;
+        border-color: #8c8c8c;
+        border-width: 1px;
+        width: 451px;
+        height: 195px;
+        position: absolute;
+        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+        margin-top: 1031px;
+        margin-right: 209px;
+        margin-left: 25px;
+        left: 0;
+      }
+      
+      .upcoming-appointments{
+
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 25px "SuezOne-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 400px;
+        padding-left: 76px;
+        padding-top: 28px;
+        
+
+
+      }
+
+      
+      ._2 {
+        color: #0280c7;
+        text-align: center;
+        font: 400 50px "Poppins-Regular", sans-serif;
+        font-family: Suez One;
+        position: relative;
+        width: 342px;
+        padding-left: 50px;
+        padding-top: 35px;
+      }
+
+    }
+      
+
+
+
+
+
+
+
+    @media screen and (max-width: 1000px) {
+
+
+    .rectangle-37 {
+      background: #ffffff;
+      border-radius: 20px;
+      border-style: solid;
+      border-color: #adacac;
+      border-width: 1px;
+      width: 460px;
+      height: 322px;
+      position: absolute;
+      box-shadow: 5px 5px 4px 0px rgba(116, 116, 116, 0.25);
+      margin-top: 1257px;
+      left: 18px;
+      padding-left: 20PX;
+
+    }
+
+    .today-november-11-2023 {
+      color: #4a4a4a;
+      text-align: left;
+      font: 400 30px "Poppins-Regular", sans-serif;
+      position: relative;
+      font-size: 18px;
+      left: -30px;
+    }
+
+    .base-chip {
+      display: flex;
+      flex-direction: row;
+      gap: 0px;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      left: -375px;
+      margin-top: -30px;
+
+      
+    }
+    .base-chip2 {
+      background: #0280c7;
+      border-radius: 20px;
+      padding: 0px 12px 0px 12px;
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      width: 80px;
+      height: 34px;
+      position: relative;
+
+    }
+    .body {
+      color: #ffffff;
+      text-align: left;
+      font: 400 15px/100% "SuezOne-Regular", sans-serif;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+
+    .time {
+      color: #4a4a4a;
+      text-align: left;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      padding-left: 25px;
+      top: 17px;
+
+    }
+
+    .service {
+      color: #4a4a4a;
+      text-align: left;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      padding-left: 170px;
+      padding-top: 2px;
+
+    }
+
+
+    
+    .status {
+      color: #4a4a4a;
+      text-align: left;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      padding-left: 324px;
+      right: -23px;
+      top: -43.6px;
+    }
+
+
+    .pm{
+
+      color: #4a4a4a;
+      text-align: center;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      width: 131px;
+      height: 45px;
+      padding-left: 0px;
+      top: -40.3px;
+      display: grid;        
+      gap: 31px;  
+
+
+
+    }
+
+    
+    .services{
+
+      color: #4a4a4a;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      padding-left: 393px;
+      display: grid;        
+      gap: 31px;
+      top: -85.7px;
+      padding-left: 134px;
+
+            
+
+      
+
+
+
+    }
+
+
+    .statuses{
+
+
+      color: #52ff00;
+      text-align: center;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      width: 150px;
+      display: grid;
+      gap: 31px;
+      padding-left: 305px;
+      top: -293.2px;
+
+
+
+
+
+
+    }
+
+
+    .ongoing{
+
+      color: #ffc907;
+      text-align: center;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      width: 150px;
+
+
+
+
+    }
+
+    .waiting{
+
+      color: #ff0000;
+      text-align: center;
+      font: 25px "Poppins-Regular", sans-serif;
+      position: relative;
+      width: 150px;
+
+
+
+
+    }
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

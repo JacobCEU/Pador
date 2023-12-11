@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">      
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/yourDetails.css"> 
+      <link rel="stylesheet" href="../css/font.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Appointment Details</title>
+</head>
+<body>
+    <div class="frame-19">
+        <div class="frame-20">
+          <div class="transaction-details">Appointment Details</div>
+          <div class="left-side">
+            <label for="firstName" id="first_name">First Name</label>          
+            <label for="phonenumber" id="phone_num">Phone Number</label>           
+            <label for="date" id="date">Date</label>            
+            <label for="service" class="centered-label" id="service">Service</label>
+            <label for="note" class="centered-label" id="note">Note</label>
+        </div>
+        <div class="right-side">
+          <label for="lastname" id="last_name">Last Name</label>
+          <label for="email" id="email">Email</label>
+          <label for="time" class="centered-label" id="time">Time</label>
+          <label for="referencenumber" id="ref_no">Reference Number</label>
+        </div>
+      
+  
+          <div class="tip">For more inquiries or cancellation of an appointment, please contact us or visit us at our clinic</div>
+
+          <div class="close">
+            <div class="close-button">
+              <div class="closebutton2">
+                <div class="close-text">Close</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <script src="../js/moment.min.js"></script>
+      <script src="../js/search.js"></script>
+      <script>
+
+          function formatTime(time){
+              let hr = time.split(":")[0]
+              let min = time.split(":")[1]
+              let secs = time.split(":")[2]
+              let ampm = "AM"
+          
+              if (hr > 12){
+                  hr = hr-12
+                  ampm = "PM"
+              }
+              
+              if (hr == 12 ){
+                  ampm = "PM"
+              }
+            
+              let formattedTime = `${hr}:${min}:${secs} ${ampm}`
+            
+              return formattedTime
+            
+                  
+          }
+
+          console.log(JSON.stringify(sessionStorage.getItem("appointmentDetails")))
+
+          let appointmentDetails = JSON.parse(sessionStorage.getItem("appointmentDetails"))
+
+          console.log("Appointment Details:", appointmentDetails);
+      
+          document.getElementById("first_name").innerText = appointmentDetails[0]["first_name"];
+          document.getElementById("phone_num").innerText = appointmentDetails[0]["contact_no"];
+          document.getElementById("date").innerText = moment(appointmentDetails[0]["date"]).format('L');
+          document.getElementById("service").innerText = appointmentDetails[0]["service_name"];
+          document.getElementById("note").innerText = appointmentDetails[0]["note"];
+          document.getElementById("last_name").innerText = appointmentDetails[0]["last_name"];
+          document.getElementById("email").innerText = appointmentDetails[0]["email"];
+          document.getElementById("time").innerText = formatTime(appointmentDetails[0]["time"]);
+          document.getElementById("ref_no").innerText = appointmentDetails[0]["ref_no"];
+
+      </script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">   
+      <script src="../js/app_client.js"></script>
+      <script src="../js/appoint.js"></script>
+
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" 
+      integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" 
+      crossorigin="anonymous">
+      <link rel="stylesheet" href="../css/style.css"> 
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+      
+      <title>Pador Book appointment Form</title>
+    </head>
+    <body>
+
+        <header class="header">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-header">
+                <a class="navbar-brand" href="homepage.html"><img src="../img/1234-1-1.png" class="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="pador-s-dental-clinic">
+                        <div class="pador-s-dental-clinic2">Pador’s Dental Clinic</div>
+                    </div>
+                    <div class="navbar-nav ml-auto">
+    
+                        <a class="nav-link" href="homepage.html">Home</a>
+                        <a class="nav-link" href="appointForm.html">Book Appointment</a>
+                        <a class="nav-link" href="#about_us">About us</a>
+            </nav>
+        </header>
+    
+        <div class="image-pador">
+            <img class="image-pador2" src="../img/padorbg.png" class="img-fluid" alt="...">
+            <div class="container">
+                <h2>Book an Appointment</h2>
+
+            
+            <form action="#" method="POST" onsubmit="clientInfo()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="suffix">Suffixes(e.g Jr,Sr,III)(optional)</label>
+                            <input type="text" class="form-control" id="suffix" name="suffix">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstName">First Name<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="firstName" name="firstName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="lastName">Last Name<span style="color: red;">*</span></label>
+                            <input type="text" class="form-control" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="middleName">Middle Name(optional)</label>
+                            <input type="text" class="form-control" id="middleName" name="middleName">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number<span style="color: red;">*</span></label>
+                            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Email(Optional)</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="preferredAppointmentDate">Preferred Appointment Date<span style="color: red;">*</span></label>
+                            <input type="date" class="form-control" id="preferredAppointmentDate" name="preferredAppointmentDate" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="preferredAppointmentTime">Preferred Appointment Time<span style="color: red;">*</span></label>
+                            <input type="time" class="form-control" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="serviceRequired">Service Required<span style="color: red;">*</span></label>
+                    <select class="form-control" id="serviceRequired" name="serviceRequired" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value=1>Dental Bridges</option>
+                        <option value=2>Teeth Whitening</option>
+                        <option value=3>Cleaning</option>
+                        <option value=4>Pain Relief</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="note">Notes</label>
+                    <textarea class="form-control" id="note" name="note" rows="3"></textarea>
+                </div>
+                
+                    <button id="submit" type="button" class="btn btn-primary" onclick="clientInfo()">Submit</button>
+                
+            </form>
+        </div>
+           </div>
+
+        
+    
+        </body>
+
+        <footer class="footer bg-footer">
+
+         
+    
+        </footer> 
+      
+
+
+      
+      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+      
+    
+  </html>

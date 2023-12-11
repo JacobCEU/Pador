@@ -1,0 +1,81 @@
+.header{
+    background: rgba(2, 128, 199, 0.6);
+}
+
+.logoadmin{
+    
+    width: 154px;
+    height: 151px;
+    flex-shrink: 0;
+}
+
+.Pador{
+
+    color: #FFF;
+
+    font-family: Suez One;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;  
+}
+
+
+
+.container {
+    margin-top: 3%;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding-top: 5%;
+    padding-bottom: 6%;
+}
+
+.form {
+    background: #FFF;
+
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto; /* Center the form */       
+}
+
+.form input {
+    margin-bottom: 10px;
+    width: 100%; /* Make the input elements full width */
+}
+
+.username {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    padding: 7px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+.password{
+    display: flex;
+    width: 300px;
+    height: 40px;
+    padding: 7px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+}
+
+
+.Logintxt{
+    padding-bottom: 3%;
+    padding-top: 2% ;
+}
+
+.form input[type="submit"] {
+    background-color: #0280C7;; /* Setting a background color for the button */
+    color: white; /* Setting text color for the button */
+    border: none; /* Removing the default border */
+    padding: 10px 20px; /* Adding padding to the button */
+    border-radius: 20px; /* Making the button rounded */
+    cursor: pointer;
+}
+

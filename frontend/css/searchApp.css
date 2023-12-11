@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    opacity: 0.9; /* Adjust the opacity value as needed */
+  }
+  
+  .frame-19 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Adjust the height to fit your design */
+  }
+  
+  .frame-20 {
+    background: #ffffff;
+    width: 300px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: flex-start; /* Align items to the top */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow for hovering effect */
+  }
+  
+  .transaction-details {
+    font-size: 24px; /* Adjust the font size as needed */
+    margin-top: 20px; /* Adjust the top margin to create space */
+    font-family:'Poppins', sans-serif;
+    color: #000000;
+  }
+  
+  /* Exclude .frame-20 from the opacity effect */
+  body:not(.frame-20):not(.submit-button) {
+    opacity: 0.8; /* Adjust the opacity value as needed */
+  }
+  .frame-20 {
+    display: flex;
+  }
+  
+  .left-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 30px;
+    position:absolute;
+    top: 100px;
+}
+
+.left-side label {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #333;
+}
+
+.left-side input {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+
+
+  .tip{
+    position: absolute;
+    top: 350px;
+    color: red;
+    max-width: 70%;
+    text-align: center;
+    font-family:'Poppins', sans-serif;
+    font-size: 16px;
+  }
+  .submit {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: red;
+    max-width: 70%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.submit-button {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2; /* Ensure the close button is on top */
+    margin-top: 20px; /* Adjust the top margin as needed */
+}
+
+.submitbutton2 {
+    background: #0280c7;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
+    cursor: pointer; /* Add pointer cursor for clickable effect */
+}
+
+.submit-text {
+    color: #ffffff;
+    text-align: left;
+    font: 400 20px/100% "SuezOne-Regular", sans-serif;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+@media only screen and (min-width: 768px) {
+    .frame-20 {
+        background: #ffffff;
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column; /* Stack items vertically */
+        align-items: center;
+        justify-content: flex-start; /* Align items to the top */
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add box shadow for hovering effect */
+      }
+      
+}
+
+.submitbutton2:hover {
+  background-color: rgb(132, 148, 240); /* Change to the color you want on hover */
+}
+
+.submitbutton2.clicked {
+  background-color: rgb(210, 223, 190); /* Change to the color you want on hover */
+}

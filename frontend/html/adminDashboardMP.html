@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/adminDashboardMPstlye.css">
+</head>
+<body>
+
+    <div id="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        
+        <!-- Option 0: Image with Name -->
+        <div class="adminName">
+          <img src="../img/dp 1.png" alt="adminName"><br>
+          <span>Dr. Pador</span>
+        </div>
+        <br><br>
+        
+        <!-- Option 1, 2, 3 -->
+     
+        <a href="#" onclick="showContent(1)">Today's Appointment</a> 
+        <a href="#" onclick="showContent(2)">View Appointment</a> 
+        <a href="#" onclick="showContent(3)">Status</a> 
+
+         <!-- logout button -->
+    <a href="adminLogin.html" id="logout-btn">◀ Logout</a>
+    </div>
+    
+   
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Admin</span><br><br>
+    
+
+    
+
+        <!-- option1 Status of all finished appointments upcomming appointments and available spots -->
+        <div class="content-section" id="content1">
+            <h2 class="todaytxt">Today's</h2>
+            <h3 class="apptxt">Appointment</h3>
+            
+            <!-- Box containing specific content -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Service</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Placeholder rows, replace with data from the database -->
+                    <tr>
+                        <td>10:00 AM</td>
+                        <td>Dental Check Up</td>
+                        <td>Ongoing</td>
+                        <td>
+                            <button onclick="viewDetails()">Details</button>
+                            <button onclick="cancelAppointment()">Cancel</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2:00 PM</td>
+                        <td>Massage</td>
+                        <td>Finished</td>
+                        <td>
+                            <button onclick="viewDetails()">Details</button>
+                            <button onclick="deleteAppointment()">Delete</button>
+                        </td>
+                    </tr>
+                    <!-- Add more rows as needed -->
+                </tbody>
+            </table>
+        </div>
+
+
+
+    
+<!-- option2 (appointment data) -->
+<div class="content-section" id="content2">
+    <h1 class="viewapptxt">View Appointment</h1><br>
+
+    <!-- Upper Part of the Table -->
+    <div class="upper-part">
+        <h2>Today: <span id="current-date-time"></span></h2>
+        <button class="view-all-btn">View All</button>
+    </div>
+
+    <!-- Table for Time, Service, and Status -->
+    <table>
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Service</th>
+                <th>Status</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Placeholder rows, replace with data from the database -->
+            <tr>
+                <td>10:00 AM</td>
+                <td>Dental Check Up</td>
+                <td>Ongoing</td>
+                <td>
+                    <button onclick="viewDetails()">Details</button>
+                    <button onclick="cancelAppointment()">Cancel</button>
+                </td>
+            </tr>
+            <tr>
+                <td>2:00 PM</td>
+                <td>Massage</td>
+                <td>Finished</td>
+                <td>
+                    <button onclick="viewDetails()">Details</button>
+                </td>
+            </tr>
+            <!-- Add more rows as needed -->
+        </tbody>
+    </table>
+</div>
+    
+
+
+
+        <!-- side bar option 3 (status) -->
+     
+       <div class="content-section" id="content3">
+        <h2 class="todaytxt">Today's</h2>
+        <h3 class="apptxt">Appointment</h3>
+        
+        <!-- Box containing specific content -->
+        <div class="horizontal-box">
+          <h3>Finished Appointments today</h3>
+          <p>5</p>
+        </div>
+        
+        <div class="horizontal-box">
+          <h3>Available Spots Left Today</h3>
+          <p>0</p>
+        </div>
+        
+        <div class="horizontal-box">
+          <h3>Upcoming Appointments</h3>
+          <p>2</p>
+        </div>
+      </div>
+
+    
+
+    <script src="../js/sidebar.js"></script>
+</body>
+</html>
