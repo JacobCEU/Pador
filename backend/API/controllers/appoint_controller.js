@@ -141,8 +141,8 @@ const viewAppointmentByID = (req, res, next) =>{
 }
 
 const searchRef = (req, res, next) => {
-    let ref_no = req.params.ref_no;
-    let contact_no = req.params.contact_no;
+    let ref_no = req.query.ref_no;
+    let contact_no = req.query.contact_no;
 
     if (!contact_no || !ref_no) {
         console.log('Missing contact_no or ref_no');
@@ -151,6 +151,8 @@ const searchRef = (req, res, next) => {
             message: "Please enter required credentials."
         });
     }
+
+    console.log(req.query);
 
     let query = `
         SELECT first_name, last_name, contact_no, email, date, time, service_name, ref_no, note
