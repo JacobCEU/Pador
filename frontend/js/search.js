@@ -7,7 +7,7 @@ function getRefInfo() {
     let url = `http://localhost:8000/appoint/searchAppointment?ref_no=${ref_no}&contact_no=${contact_no}`;
   
     // Submit the credentials
-    submitInfo(url);
+    submitInfo(url, ref_no, contact_no);
   }
   
   function api_client(url, content, callback) {
@@ -20,7 +20,6 @@ function getRefInfo() {
         return response.json();
       })
       .then(data => {
-        console.log('Response data:', data);
         callback(data);
       })
       .catch(error => {
@@ -28,8 +27,7 @@ function getRefInfo() {
       });
   }
   
-  function submitInfo(url) {
-    console.log('URL:', url);
+function submitInfo(url, ref_no, contact_no) {
   
     let content = {
       method: 'GET',
@@ -41,10 +39,10 @@ function getRefInfo() {
     api_client(url, content, (response) => {
       if (response.successful === true) {
         alert(response.message);
-        window.location.href = "../html/yourDetails.html"; 
+        window.location.href = `../html/yourDetails.html?ref_no=${ref_no}&contact_no=${contact_no}`;
         
       } else {
         alert("Please enter required credentials.");
       }
     });
-  }
+}

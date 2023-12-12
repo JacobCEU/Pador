@@ -1,5 +1,6 @@
 function clientInfo() {
     // Create the payload
+
     let payload = {
         first_name: document.getElementById("firstName").value,
         last_name: document.getElementById("lastName").value,
@@ -29,7 +30,7 @@ function clientInfo() {
     console.log("Payload:", payload);
 
     // Submit the appointment
-    submitAppointment(payload);
+    submitAppointment(payload, payload.contact_no);
 }
 
 
@@ -45,6 +46,7 @@ function api_client( url, content, callback) {
 
 function submitAppointment(payload){
     console.log("Payload:", payload);
+    let contact_no = payload.contact_no;
     let url = "http://localhost:8000/appoint/bookAppointment"
 
     let content = {
@@ -61,7 +63,7 @@ function submitAppointment(payload){
             alert(message);
 
             // Redirect to appointmentDetails.html after successful submission
-            window.location.href = "appointmentDetails.html";
+            window.location.href = `../html/yourDetails.html?ref_no=${response.ref_no}&contact_no=${contact_no}`;
         } else {
             alert(response.message);
         }
