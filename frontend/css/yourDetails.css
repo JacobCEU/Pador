@@ -3,20 +3,20 @@ body {
   padding: 0;
   background: rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  opacity: 0.9; /* Adjust the opacity value as needed */
+  opacity: 0.9; 
 }
 
 .frame-19 {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh; /* Adjust the height to fit your design */
+  min-height: 100vh; 
 }
 
 .frame-20 {
   background: #ffffff;
-  width: 600px; /* Default width */
-  height: 650px; /* Default height */
+  width: 600px; 
+  height: 650px; 
   position: absolute;
   left: 50%;
   top: 50%;
@@ -29,15 +29,15 @@ body {
 }
 
 .transaction-details {
-  font-size: 24px; /* Adjust the font size as needed */
-  margin-top: 20px; /* Adjust the top margin to create space */
+  font-size: 24px; 
+  margin-top: 20px; 
   font-family:'Poppins', sans-serif;
   color: #000000;
 }
 
-/* Exclude .frame-20 from the opacity effect */
+
 body:not(.frame-20):not(.close-button) {
-  opacity: 0.8; /* Adjust the opacity value as needed */
+  opacity: 0.8; 
 }
 .frame-20 {
   display: flex;
@@ -65,14 +65,14 @@ body:not(.frame-20):not(.close-button) {
   right: 60px;
   top:120px;
 }
-/* Optional: Add some spacing between labels */
+
 .left-side label,
 .right-side label {
   margin-bottom: 40px;
 }
 .tip{
   position: absolute;
-  top: 550px;
+  top: 500px;
   color: red;
   max-width: 70%;
   text-align: center;
@@ -84,7 +84,7 @@ body:not(.frame-20):not(.close-button) {
 }
 .close {
   position: absolute;
-  top: 470px;
+  top: 440px;
   left: 50%;
   transform: translateX(-50%);
   color: red;
@@ -103,8 +103,8 @@ body:not(.frame-20):not(.close-button) {
   width: 121px;
   height: 26px;
   position: relative;
-  z-index: 2; /* Ensure the close button is on top */
-  margin-top: 20px; /* Adjust the top margin as needed */
+  z-index: 2; 
+  margin-top: 20px; 
 }
 .closebutton2 {
   background: #0280c7;
@@ -130,6 +130,29 @@ body:not(.frame-20):not(.close-button) {
   align-items: center;
   justify-content: flex-start;
 }
+.stacked-label-container {
+      position: relative;
+      width: 150px; 
+      height: 60px; 
+    }
+
+    .label-on-top {
+      position: absolute;
+      top: -10px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      font-size: 10px;
+      color: #333;
+      font-family: 'Poppins';
+  }
+
+    .label-underneath {
+      width: 100%;
+      text-align: center;
+      font-size: 18px;
+      color: #000000; 
+    }
 @media only screen and (min-width: 768px) {
   .frame-20 {
     background: #ffffff;

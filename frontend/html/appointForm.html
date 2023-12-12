@@ -43,95 +43,82 @@
                         <a class="nav-link" href="#about_us">About us</a>
             </nav>
         </header>
-    
         <div class="image-pador">
             <img class="image-pador2" src="../img/padorbg.png" class="img-fluid" alt="...">
-            <div class="container">
-                <h2>Book an Appointment</h2>
+            <div class="container text-center">
+                <h2>BOOK AN APPOINTMENT</h2>
 
             
             <form action="#" method="POST" onsubmit="clientInfo()">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="suffix">Suffixes(e.g Jr,Sr,III)(optional)</label>
-                            <input type="text" class="form-control" id="suffix" name="suffix">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="firstName">First Name<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control" id="firstName" name="firstName" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="lastName">Last Name<span style="color: red;">*</span></label>
-                            <input type="text" class="form-control" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="middleName">Middle Name(optional)</label>
-                            <input type="text" class="form-control" id="middleName" name="middleName">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="contactNumber">Contact Number<span style="color: red;">*</span></label>
-                            <input type="tel" class="form-control" id="contactNumber" name="contactNumber" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="email">Email(Optional)</label>
-                            <input type="email" class="form-control" id="email" name="email">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="preferredAppointmentDate">Preferred Appointment Date<span style="color: red;">*</span></label>
-                            <input type="date" class="form-control" id="preferredAppointmentDate" name="preferredAppointmentDate" required>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="form-group">
-                            <label for="preferredAppointmentTime">Preferred Appointment Time<span style="color: red;">*</span></label>
-                            <input type="time" class="form-control" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="serviceRequired">Service Required<span style="color: red;">*</span></label>
-                    <select class="form-control" id="serviceRequired" name="serviceRequired" required>
-                        <option value="" disabled selected>Select a service</option>
-                        <option value=1>Dental Bridges</option>
-                        <option value=2>Teeth Whitening</option>
-                        <option value=3>Cleaning</option>
-                        <option value=4>Pain Relief</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="note">Notes</label>
-                    <textarea class="form-control" id="note" name="note" rows="3"></textarea>
-                </div>
-                
-                    <button id="submit" type="button" class="btn btn-primary" onclick="clientInfo()">Submit</button>
-                
-            </form>
+                    <div class = "all-textbox"></div>
+                    <input type="text" class="suffix" id="suffix" name="suffix" placeholder="Suffix *Jr, Sr, III">
+                        
+                      
         </div>
+
+        
+
+        <div class="firstname">
+            <input type="text" class="first-name" id="firstName" name="firstName" placeholder="Firt Name">
+        </div>
+        <div class="lastname">
+            <input type="text" class="last-name" id="lastName" name="lastName" placeholder="Last Name">
+          </div>
+        <div class="flagimage">
+            <img class="flag" src="../img/Flag.png" />
+            <div class="_63">+63</div>
+          </div>
+
+          <div class="contactnumber">
+            <input type="tel" class="number" id="contactNumber" name="contactNumber" required>
+          </div>
+          <div class="email">
+            <input type="email" class="emailtextbox" id="email" name="email">
+            <div class="e-g-test-gmail-com">e.g. test@gmail.com</div>
+            
+          </div>
+
+          <div class="preferred-appointment-date">
+            
+               
+                    <input type="date" class="calendardate" id="preferredAppointmentDate" name="preferredAppointmentDate" required>
+                </div>
+            
+        
+            <div class="preferred-appointment-time">
+                <input type="time" class="time" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
+            </div>
+        
+          <div class="service">
+            
+            <select class="service2" id="serviceRequired" name="serviceRequired" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value=1>Dental Bridges</option>
+                <option value=2>Teeth Whitening</option>
+                <option value=3>Cleaning</option>
+                <option value=4>Pain Relief</option>
+            </select>
+        </div>
+
+          <div class="notetextbox">
+            <textarea type="text" class="notes" id="note" name="note" rows="3"></textarea>
+          </div>
+
+
+          <div id="submit" type="button"  onclick="clientInfo()" class="submit center">
+            <div class="submit2">
+              <div class="body">Submit</div>
+            </div>
+          </div>
+          <div class="text">
+            For more inquiries or cancellation of an appointment, please contact us or
+            visit us at our clinic
+            </div>
+
+
            </div>
+           
 
         
     

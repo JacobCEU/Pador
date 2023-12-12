@@ -131,19 +131,24 @@ body {
 }
 
 .container {
-    background-color: rgb(255, 255, 255,0.8999999761581421);
+  background: rgba(255, 255, 255, 0.8999999761581421);
     position: absolute;
     padding: 20px; 
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-style: solid;
+    border-color: #000000;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25); 
     margin-top: 100px;
     margin-left: 40px;
+    color: #4a4a4a;
     top: 59px;
     left: 50px;
     width: 653px;
     height: 989px; 
+    border-width: 1px;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
     
-    max-width: 600px;
 }
 /* .form-control{
   background: rgba(132, 130, 131, 0.14);
@@ -153,9 +158,372 @@ body {
   overflow: hidden;
 } */
 
+.suffix,
+.suffix * {
+  box-sizing: border-box;
+}
+.suffix {
+  background: rgba(132, 130, 131, 0.14);
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 73px;
+  top: 40px;
+  font-size: 12px;
+}
+.suffixes {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  width: 129px;
+}
+.jr-sr-iii {
+  color: rgba(74, 74, 74, 0.25);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 88px;
+  top: 13px;
+  width: 193px;
+}
+
+.firstname,
+.firstname * {
+  box-sizing: border-box;
+}
 
 
+  .first-name {
+    color: #4a4a4a;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8999999761581421;
+    position: relative;
+    left: -134px;
+    top: 80px;
+    width: 129px;
+    background: rgba(132, 130, 131, 0.14);
+    width: 227px;
+    height: 45px;
+}
+.lastname,
+.lastname * {
+  box-sizing: border-box;
+}
+.lastname {
+  position: relative;
+  left: 140px;
+  top: 30px;
+}
+.last-name {
+  background: rgba(132, 130, 131, 0.14);
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  width: 227px;
+  height: 45px;
+}
+.flagimage,
+.flagimage * {
+  box-sizing: border-box;
+}
+.flagimage {
+  background: rgba(132, 130, 131, 0.14);
+  width: 75px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 68px;
+  border-color: black;
+  border: solid;
+  border-width: thin;
+}
+.flag {
+  width: 26px;
+  height: 27px;
+  position: absolute;
+  left: 6px;
+  top: 13px;
+}
+._63 {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 38px;
+  top: 17px;
+  width: 37px;
+  height: 23px;
+}
 
+
+.contactNumber,
+.contactNumber * {
+  box-sizing: border-box;
+}
+
+.number {
+  background: rgba(132, 130, 131, 0.14);
+  color: rgba(74, 74, 74, 0.25);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  right: 90px;
+  top: 17px;
+  width: 145px;
+  height: 46px;
+}
+.emailtextbox,
+.emailtextbox * {
+  box-sizing: border-box;
+}
+.emailtextbox {
+  background: rgba(132, 130, 131, 0.14);
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  
+}
+.email {
+ 
+  background: rgba(132, 130, 131, 0.14);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 350px;
+  bottom: 660px;
+  width: 129px;
+}
+.e-g-test-gmail-com {
+  color: rgba(74, 74, 74, 0.25);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 79px;
+  top: 18px;
+  width: 193px;
+}
+.frame-25 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 19px;
+  top: -24px;
+  overflow: hidden;
+}
+.calendardate,
+.calendardate * {
+  box-sizing: border-box;
+}
+.calendardate {
+  
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 350px;
+  background: rgba(132, 130, 131, 0.14);
+
+}
+.preferred-appointment-date {
+  
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  width: 193px;
+}
+
+.time,
+.time * {
+  box-sizing: border-box;
+}
+.time {
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left:330px;
+  top:350px;
+  background: rgba(132, 130, 131, 0.14);
+}
+.preferred-appointment-time {
+  
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 19px;
+  top: 18px;
+  width: 193px;
+}
+.calendar2 {
+  opacity: 0.6000000238418579;
+  width: 23px;
+  height: 18px;
+  position: absolute;
+  left: 196px;
+  top: 13px;
+  overflow: visible;
+}
+
+.service2,
+.service2 * {
+  box-sizing: border-box;
+}
+.service2 {
+  background: rgba(132, 130, 131, 0.14);
+  width: 243.93px;
+  height: 45.82px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 30px;
+  font-family: "Poppins-Regular", sans-serif;
+
+}
+.service {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  width: 171px;
+  top: 420px;
+  left:17px;
+}
+
+
+.notetextbox,
+.notetextbox * {
+  box-sizing: border-box;
+}
+.notetextbox {
+  background: rgba(132, 130, 131, 0.14);
+  width: 530px;
+  height: 159px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 217px;
+}
+.notes {
+  color: #4a4a4a;
+  background: rgba(132, 130, 131, 0.14);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  left: 15px;
+  top: 18px;
+  width: 530px;
+  height: 159px;
+}
+
+.submit,
+.submit * {
+  box-sizing: border-box;
+}
+.submit {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 121px;
+  height: 26px;
+  position: absolute;
+  top: 709px;
+  left: 48%;
+  transform: translateX(-50%);
+}
+.submit2 {
+  background: #0280c7;
+  border-radius: 20px;
+  padding: 0px 12px 0px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 179px;
+  height: 34px;
+  position: relative;
+}
+.body {
+  color: #ffffff;
+  text-align: left;
+  font-family: "SuezOne-Regular", sans-serif;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.text,
+.text
+  * {
+  box-sizing: border-box;
+}
+.text {
+  color: #fe0000;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  width: 538px;
+  height: 74px;
+  left: 40px;
+  top: 290px;
+  text-align: center;
+}
 
 .footer {
     background: linear-gradient(180deg, rgba(58, 156, 211, 0.00) 0%, rgba(12, 63, 201, 0.73) 74.06%, rgba(18, 27, 75, 0.82) 100%);
@@ -166,3 +534,208 @@ body {
     width: 100%; 
   }
 
+  @media (max-width: 768px)  {
+    .container {
+      background: rgba(255, 255, 255, 0.8999999761581421);
+      position: absolute;
+      padding: 20px;
+      border-style: solid;
+      border-color: #000000;
+      box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+      margin-left: 33px;
+      color: #4a4a4a;
+      top: 219px;
+      left: -69px;
+      left: -23px;
+      width: 395px;
+      height: 930px;
+      border-width: 1px;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 30px;
+      font-weight: 400;
+  }
+  .first-name {
+    color: #4a4a4a;
+    text-align: left;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8999999761581421;
+    position: relative;
+    left: -5px;
+    top: 54px;
+    width: 129px;
+    background: rgba(132, 130, 131, 0.14);
+    width: 227px;
+    height: 45px;
+}
+.last-name {
+  background: rgba(132, 130, 131, 0.14);
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  width: 227px;
+  height: 45px;
+}
+.lastname {
+  position: relative;
+  left: -5px;
+  top: 60px;
+}
+.flagimage {
+  background: rgba(132, 130, 131, 0.14);
+  width: 75px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 59px;
+  top: 80px;
+  border-color: black;
+  border: solid;
+  border-width: thin;
+}
+.number {
+  background: rgba(132, 130, 131, 0.14);
+  color: rgba(74, 74, 74, 0.25);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  right: -36px;
+  top: 30px;
+  width: 145px;
+  height: 46px;
+}
+.email {
+  background: rgba(132, 130, 131, 0.14);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 78px;
+  bottom: 632px;
+  bottom: 492px;
+}
+.emailtextbox {
+  background: rgba(132, 130, 131, 0.14);
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+}
+.calendardate {
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 350px;
+  background: rgba(132, 130, 131, 0.14);
+}
+.time {
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 490px;
+  background: rgba(132, 130, 131, 0.14);
+}
+.preferred-appointment-date {
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 17px;
+  left: 18px;
+  top: 100px;
+  width: 193px;
+}
+.service {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 15px;
+  top: 18px;
+  width: 69px;
+  top: 535px;
+  left: 17px;
+}
+.service2 {
+  background: rgba(132, 130, 131, 0.14);
+  width: 243.93px;
+  height: 45.82px;
+  position: relative;
+  overflow: hidden;
+  left: 60px;
+  top: 30px;
+  font-family: "Poppins-Regular", sans-serif;
+}
+.notetextbox {
+  background: rgba(132, 130, 131, 0.14);
+  width: 372px;
+  height: 159px;
+  position: relative;
+  overflow: hidden;
+  left: -12px;
+  top: 283px;
+}
+
+.notes {
+  color: #4a4a4a;
+  background: rgba(132, 130, 131, 0.14);
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  left: 15px;
+  top: 18px;
+  width: 372px;
+  height: 159px;
+}
+
+.submit {
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 121px;
+  height: 26px;
+  position: absolute;
+  top: 809px;
+  left: 43%;
+  transform: translateX(-50%);
+}
+.text {
+  color: #fe0000;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  width: 494px;
+  height: 74px;
+  left: 40px;
+  top: 348px;
+  text-align: center;
+  max-width: 80%;
+}
+  }
+  

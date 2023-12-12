@@ -23,23 +23,56 @@
 <body>
     <div class="frame-19">
         <div class="frame-20">
+
           <div class="transaction-details">Appointment Details</div>
           <div class="left-side">
-            <label for="firstName" id="first_name">First Name</label>          
-            <label for="phonenumber" id="phone_num">Phone Number</label>           
-            <label for="date" id="date">Date</label>            
-            <label for="service" class="centered-label" id="service">Service</label>
-            <label for="note" class="centered-label" id="note">Note</label>
+
+            <div class="stacked-label-container">
+              <label class="label-on-top">First Name</label>
+              <label for="firstName" class="label-underneath" id="first_name">First Name</label>
+            </div>
+            <div class="stacked-label-container">
+              <label class="label-on-top">Contact Number</label>
+            <label for="phonenumber" class="label-underneath" id="phone_num">Phone Number</label> 
+          </div>
+
+            <div class="stacked-label-container">
+              <label class="label-on-top">Date</label>
+            <label for="date" class="label-underneath" id="date">Date</label>
+          </div>
+            <div class="stacked-label-container">
+              <label class="label-on-top">Service</label>
+            <label for="service" class="centered-label label-underneath" id="service">Service</label>
+          </div>
+            <div class="stacked-label-container">
+              <label class="label-on-top">Note</label>
+            <label for="note" class="centered-label label-underneath" id="note">Note</label>
+          </div>
         </div>
         <div class="right-side">
-          <label for="lastname" id="last_name">Last Name</label>
-          <label for="email" id="email">Email</label>
-          <label for="time" class="centered-label" id="time">Time</label>
-          <label for="referencenumber" id="ref_no">Reference Number</label>
+          <div class="stacked-label-container">
+            <label class="label-on-top">Last Name</label>
+          <label for="lastname"  class="label-underneath" id="last_name">Last Name</label>
+          </div>
+          <div class="stacked-label-container">
+            <label class="label-on-top">Email</label>
+          <label for="email"  class="label-underneath" id="email">Email</label>
         </div>
-      
+          <div class="stacked-label-container">
+            <label class="label-on-top">Time</label>
+          <label for="time" class="centered-label label-underneath" id="time">Time</label>
+        </div>    
+        </div>
+        <div class="refnummain">
+          <div class="stacked-label-container">
+            <label class="label-on-top">Reference Number</label>
+          <label for="referencenumber" class="label-underneath" id="ref_no">Reference Number</label>
+          </div>
+        </div>
+    
   
-          <div class="tip">For more inquiries or cancellation of an appointment, please contact us or visit us at our clinic</div>
+          <div class="tip">Payment are to be handled in person or contact us for other ways of handling the payment.
+            For more inquiries or cancellation of an appointment, please contact us or visit us at our clinic</div>
 
           <div class="close">
             <div class="close-button">
