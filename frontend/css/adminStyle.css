@@ -1,7 +1,84 @@
-.header{
+.header {
     background: rgba(2, 128, 199, 0.6);
+    height: 454px;
+}
+.navbar {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
 }
 
+.form {
+    background: #FFF;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    width: 988px;
+    height: 949px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    margin-top: 74px;
+}
+
+.form input {
+    margin-bottom: 24px;
+    width: 317px;
+    height: 59px;
+    align-content: center;
+    align-items: center;
+    position: relative;
+    top: 25px;}
+.username {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    padding: 7px 16px;
+    align-items: flex-start;
+    flex-shrink: 0;
+    top: 32px;
+    position: relative;
+    background: rgba(132, 130, 131, 0.14);
+    font-family: 'Poppins', sans-serif; 
+
+}
+.password {
+    display: flex;
+    width: 300px;
+    height: 40px;
+    padding: 7px 16px;
+    align-items: flex-start;
+    position: relative;
+    flex-shrink: 0;
+    background: rgba(132, 130, 131, 0.14);
+    font-family: 'Poppins', sans-serif; 
+}
+.form input[type="submit"] {
+    background-color: #0280C7;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    background: #0280c7;
+    width: 179px;
+    height: 34px;
+    padding: 0px 12px 0px 12px;
+    
+    font-family: 'Suez One', serif;
+}
 .logoadmin{
     
     width: 154px;
@@ -9,19 +86,29 @@
     flex-shrink: 0;
 }
 
-.Pador{
-
+.Pador {
     color: #FFF;
-
-    font-family: Suez One;
+    font-family: 'Suez One', serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: normal;  
+    line-height: normal;
+    position: absolute;
+    /* right: -507px; */
+    left: 195px;
 }
 
-
-
+.AdminLogin {
+    color: #FFF;
+    font-family: 'Suez One', serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: absolute;
+    left: 781px;
+    top: 198px;
+}
 .container {
     margin-top: 3%;
     padding: 20px;
@@ -31,51 +118,68 @@
     padding-bottom: 6%;
 }
 
-.form {
-    background: #FFF;
-
-    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    margin: 0 auto; /* Center the form */       
-}
-
-.form input {
-    margin-bottom: 10px;
-    width: 100%; /* Make the input elements full width */
-}
-
-.username {
-    display: flex;
-    width: 300px;
-    height: 40px;
-    padding: 7px 16px;
-    align-items: flex-start;
-    flex-shrink: 0;
-}
-
-.password{
-    display: flex;
-    width: 300px;
-    height: 40px;
-    padding: 7px 16px;
-    align-items: flex-start;
-    flex-shrink: 0;
-}
-
-
 .Logintxt{
     padding-bottom: 3%;
     padding-top: 2% ;
 }
-
-.form input[type="submit"] {
-    background-color: #0280C7;; /* Setting a background color for the button */
-    color: white; /* Setting text color for the button */
-    border: none; /* Removing the default border */
-    padding: 10px 20px; /* Adding padding to the button */
-    border-radius: 20px; /* Making the button rounded */
-    cursor: pointer;
+.navbar-brand {
+    display: flex;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
 }
+@media (max-width: 903px) {
+    .logoadmin {
+        width: 124px;
+        height: 121px;
+        flex-shrink: 0;
+    }
 
+    .Pador {
+        color: #FFF;
+        font-family: 'Suez One', serif;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        /* right: -507px; */
+        left: 144px;
+    }
+
+    .AdminLogin {
+        color: #FFF;
+        font-family: 'Suez One', serif;
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        position: absolute;
+        left: 72px;
+        top: 198px;
+    }
+
+    .form {
+        background: #FFF;
+        box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.25);
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+        margin: 0 auto;
+        width: 388px;
+        height: 749px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        display: flex;
+        align-content: center;
+        flex-wrap: nowrap;
+        margin-top: 74px;
+    }
+
+
+
+}
