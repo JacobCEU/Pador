@@ -11,8 +11,24 @@ body{
 
     display: flex;
     overflow: auto;
+    
 }
-
+.mainrec{
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    right: 165px;
+}
+.tworectangle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 909px;
+  /* gap: 188px; */
+  /* gap: 10rem; */
+  align-content: center;
+}
 
 .square{
 
@@ -21,12 +37,17 @@ height: 450px;
 flex-shrink: 0;
 background: rgba(2, 128, 199, 0.6);
 
-
-
-
-
-
 }
+
+.nextrectangle {
+  display: flex;
+  flex-direction: row;
+  right: 791px;
+  position: relative;
+}
+
+
+
 
 .logo{
 width: 154px;
@@ -143,19 +164,18 @@ border-radius: 8px;
 
 
     .rectangle-32 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 390px;
-        margin-left: 456px;
-        
-      }
+      background: #ffffff;
+      border-radius: 20px;
+      border-style: solid;
+      border-color: #8c8c8c;
+      border-width: 1px;
+      width: 451px;
+      height: 195px;
+      position: absolute;
+      box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+      margin-top: 390px;
+      right: -615px;
+  }
 
       .finished-appointments-today {
         color: #4a4a4a;
@@ -180,7 +200,7 @@ border-radius: 8px;
       }
 
       
-    .rectangle-39 {
+      .rectangle-39 {
         background: #ffffff;
         border-radius: 20px;
         border-style: solid;
@@ -191,10 +211,9 @@ border-radius: 8px;
         position: absolute;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
         margin-top: 390px;
-        margin-right: 456px;
-        right: 0;
-        
-      }
+        /* margin-right: -21px; */
+        right: -141px;
+    }
 
       .notifications {
         color: #4a4a4a;
@@ -231,13 +250,14 @@ border-radius: 8px;
         border-width: 1px;
         width: 451px;
         height: 195px;
-        position: absolute;
+        position: relative;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 644px;
-        margin-right: 733px;
-        margin-left: 456px;
-        left: 0;
-      }
+        margin-top: 632px;
+        /* margin-right: 1215px; */
+        /* margin-left: -427px; */
+        left: 45px;
+        /* right: 88px; */
+    }
       
       .available-spots-left-today{
 
@@ -266,20 +286,22 @@ border-radius: 8px;
       }
 
       .rectangle-38 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 644px;
-        margin-right: 456px;
-        margin-left: 256px;
-        right: 0;
-      }
+    background: #ffffff;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #8c8c8c;
+    border-width: 1px;
+    width: 451px;
+    height: 195px;
+    position: absolute;
+    box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+    margin-top: 644px;
+    /* margin-right: 746px; */
+    /* margin-left: 197px; */
+    right: 0;
+    top: -10px;
+    left: -428px;
+}
       
       .upcoming-appointments{
 

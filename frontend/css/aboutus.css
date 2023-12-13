@@ -1,0 +1,135 @@
+.padorwriting2{
+    width: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+
+}
+  .navbar-nav.ml-auto .nav-link {
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 2; /* Set a higher z-index to ensure the navbar is on top */
+    color: white;
+  }
+  
+  .desktop-1 {
+    position: relative; /* Set position to relative so it doesn't overlap with the fixed navbar */
+    z-index: 1; /* Set a lower z-index than the navbar */
+  }
+  body {
+    margin: 0;
+    position: relative;
+  }
+  .rectangle-42::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 770px;
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 0.009999999747378752%,
+        rgba(4, 4, 4, 0.94) 6.267677992582321%,
+        rgba(9, 9, 9, 0.86) 13.674850761890411%,
+        rgba(14, 14, 14, 0.79) 20.802506804466248%,
+        rgba(19, 19, 19, 0.72) 27.790406346321106%,
+        rgba(24, 24, 24, 0.65) 35.33733785152435%,
+        rgba(28, 28, 28, 0.58) 41.76620543003082%,
+        rgba(32, 32, 32, 0.53) 47.077006101608276%,
+        rgba(34, 34, 34, 0.49) 51.40950679779053%,
+        rgba(37, 37, 37, 0.44) 55.60224652290344%,
+        rgba(40, 40, 40, 0.4) 59.934741258621216%,
+        rgba(43, 43, 43, 0.36) 63.987720012664795%,
+        rgba(46, 46, 46, 0.32) 68.4599757194519%,
+        rgba(49, 49, 49, 0.26) 73.63102436065674%,
+        rgba(52, 52, 52, 0.23) 77.26473212242126%,
+        rgba(56, 56, 56, 0.17) 83.2743227481842%,
+        rgba(58, 58, 58, 0.13) 87.18754649162292%,
+        rgba(63, 63, 63, 0.06) 93.057382106781%,
+        rgba(67, 67, 67, 0) 98.3681857585907%
+      );
+    z-index: 1; /* Ensure the overlay is below other elements */
+}
+  .logo{
+    height: 90px;
+    margin-left: 5px
+    
+  
+    }
+    .pador-s-dental-clinic {
+        width: 306px;
+        height: 39px;
+        position: relative;
+        font-family: 'Suez One', serif;
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+
+    .slideshow-container {
+        max-width: 100%;
+        position: relative;
+    }
+    
+    .mySlides {
+        display: none;
+        animation: fade 1.5s ease-out;
+    }
+    
+    /* Optional: Add styles for navigation dots */
+    .dot {
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    
+    
+    
+
+    .padorwriting2, .padorwriting3 {
+        width: 100%;
+        height: 770px;
+    }
+    .padorwriting2.show,
+.padorwriting3.show {
+    opacity: 1;
+}
+    /* Optional: Add styles for navigation dots */
+    @keyframes fade {
+        from {
+            opacity: 0.4;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+/* Optional: Add active class for the current dot */
+.mySlides {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-out; /* Add a transition for opacity */
+}
+.mySlides.active {
+    display: block;
+    opacity: 1;
+}
