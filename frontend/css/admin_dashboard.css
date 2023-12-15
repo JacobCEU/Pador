@@ -333,7 +333,7 @@ border-radius: 8px;
         margin-top: 19px;
       }
 
-      .base-chip {
+      .base-button {
         display: flex;
         flex-direction: row;
         gap: 0px;
@@ -343,7 +343,8 @@ border-radius: 8px;
         margin-left: 707px;
         margin-top: -30px;
       }
-      .base-chip2 {
+
+      .base-button .button-container {
         background: #0280c7;
         border-radius: 20px;
         padding: 0px 12px 0px 12px;
@@ -356,7 +357,23 @@ border-radius: 8px;
         width: 179px;
         height: 34px;
         position: relative;
+        cursor: pointer; /* Add cursor style for interaction */
+        transition: background-color 0.3s ease; /* Add transition for smooth color change */
+      }
 
+      /* Style for the button text */
+      .base-button .button-container .body {
+          color: #fff; /* Set text color to white or your preferred color */
+      }
+
+      /* Hover effect */
+      .base-button .button-container:hover {
+          background: #036aa7; /* Change background color on hover */
+      }
+
+      /* Click effect */
+      .base-button .button-container:active {
+          background: #01446b; /* Change background color on click */
       }
       .body {
         color: #ffffff;
@@ -1033,6 +1050,10 @@ border-radius: 8px;
     }
 
   }
+
+  #today .today label {
+    font-size: 2.5em;
+}
 
 
 
