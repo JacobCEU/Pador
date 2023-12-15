@@ -365,7 +365,7 @@ body {
   position: relative;
   width: 723px;
   margin-bottom: 10px;
-  right: 237px;
+  right: 207px;
 }
 .aboutustext {
   color: #4a4a4a;
@@ -422,7 +422,7 @@ body {
   position: relative;
   width: 723px;
   margin-bottom: -409px;
-  margin-top: 11px;
+  margin-top: 5px;
   /* right: 50px; */
   display: flex;
   flex-direction: column;
@@ -457,6 +457,8 @@ body {
   justify-content: center;
   align-items: center;
   right: 246px;
+  top: -38px;
+  padding-left: 14px;
 }
 .missiontext {
   color: #4a4a4a;
@@ -536,6 +538,15 @@ body {
 .navigation {
   height: 10px;
   width: 10px;
+}
+
+
+.rectangle2{
+
+
+  position: absolute;
+  margin-left: 170px;
+
 }
 
 
