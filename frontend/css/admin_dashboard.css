@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+  
     
 
 
@@ -39,12 +40,7 @@ background: rgba(2, 128, 199, 0.6);
 
 }
 
-.nextrectangle {
-  display: flex;
-  flex-direction: row;
-  right: 791px;
-  position: relative;
-}
+
 
 
 
@@ -174,7 +170,7 @@ border-radius: 8px;
       position: absolute;
       box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
       margin-top: 390px;
-      right: -615px;
+      left: -250px;
   }
 
       .finished-appointments-today {
@@ -200,20 +196,7 @@ border-radius: 8px;
       }
 
       
-      .rectangle-39 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 390px;
-        /* margin-right: -21px; */
-        right: -141px;
-    }
+    
 
       .notifications {
         color: #4a4a4a;
@@ -296,11 +279,8 @@ border-radius: 8px;
     position: absolute;
     box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
     margin-top: 644px;
-    /* margin-right: 746px; */
-    /* margin-left: 197px; */
-    right: 0;
     top: -10px;
-    left: -428px;
+    right: 707px;
 }
       
       .upcoming-appointments{
@@ -508,6 +488,13 @@ border-radius: 8px;
 
       }
 
+      #logoutButton{
+
+
+        position: absolute;
+        right: 355px;
+      }
+
       
       
       
@@ -686,7 +673,7 @@ border-radius: 8px;
             position: absolute;
             box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
             margin-top: 390px;
-            margin-left: 25px;
+            margin-left: 225px;
             
           }
     
@@ -720,49 +707,6 @@ border-radius: 8px;
 
 
 
-    @media screen and (max-width: 1000px) {
-    .rectangle-39 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 600px;
-        left: 25px;
-       
-        
-      }
-
-      .notifications {
-        color: #4a4a4a;
-        text-align: center;
-        font: 400 25px "SuezOne-Regular", sans-serif;
-        position: relative;
-        width: 400px;
-        font-family: Suez One;
-        padding-left: 29px;
-        padding-top: 25px;
-
-        
-      }
-
-      ._2-unread-messages{
-        color: #0280c7;
-        text-align: center;
-        font: 400 25px "SuezOne-Regular", sans-serif;
-        font-family: Suez One;
-        position: relative;
-        width: 400px;
-        padding-top: 45px;
-        text-align: center;
-        padding-left: 29px;
-      }
-
-    }
 
 
 
@@ -860,6 +804,13 @@ border-radius: 8px;
         padding-left: 50px;
         padding-top: 35px;
       }
+
+    }
+
+    .logoutButton{
+
+      left: 0px;
+
 
     }
       
