@@ -1,9 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/adminDashboardMPstlye.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Suez+One&display=swap" rel="stylesheet">
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      
 </head>
 <body>
 
@@ -12,8 +22,8 @@
         
         <!-- Option 0: Image with Name -->
         <div class="adminName">
-          <img src="../img/dp 1.png" alt="adminName"><br>
-          <span>Dr. Pador</span>
+          <img src="../img/admindp.png" alt="adminName"><br>
+          <span>Dr. Pador</span><br>
         </div>
         <br><br>
         
@@ -22,6 +32,7 @@
         <a href="#" onclick="showContent(1)">Today's Appointment</a> 
         <a href="#" onclick="showContent(2)">View Appointment</a> 
         <a href="#" onclick="showContent(3)">Status</a> 
+        <a href="#" onclick="showContent(4)">Dashboard View all</a> 
 
          <!-- logout button -->
     <a href="adminLogin.html" id="logout-btn">◀ Logout</a>
@@ -30,7 +41,7 @@
    
 
     <div id="main">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Admin</span><br><br>
+        <span class="menu-text" onclick="openNav()">☰ Admin</span><br><br>
     
 
     
@@ -58,7 +69,7 @@
                         <td>Ongoing</td>
                         <td>
                             <button onclick="viewDetails()">Details</button>
-                            <button onclick="cancelAppointment()">Cancel</button>
+                            <button class="cancel-btn" onclick="cancelAppointment()">Cancel</button>
                         </td>
                     </tr>
                     <tr>
@@ -67,7 +78,7 @@
                         <td>Finished</td>
                         <td>
                             <button onclick="viewDetails()">Details</button>
-                            <button onclick="deleteAppointment()">Delete</button>
+                            <button class="delete-btn" onclick="deleteAppointment()">Delete</button>
                         </td>
                     </tr>
                     <!-- Add more rows as needed -->
@@ -106,7 +117,7 @@
                 <td>Ongoing</td>
                 <td>
                     <button onclick="viewDetails()">Details</button>
-                    <button onclick="cancelAppointment()">Cancel</button>
+                    <button class="cancel-btn" onclick="cancelAppointment()">Cancel</button>
                 </td>
             </tr>
             <tr>
@@ -130,18 +141,17 @@
        <div class="content-section" id="content3">
         <h2 class="todaytxt">Today's</h2>
         <h3 class="apptxt">Appointment</h3>
+
+        
         
         <!-- Box containing specific content -->
         <div class="horizontal-box">
-          <h3>Finished Appointments today</h3>
-          <p>5</p>
+  
+            <h3>Finished Appointments today</h3>
+            <p>5</p>
         </div>
         
-        <div class="horizontal-box">
-          <h3>Available Spots Left Today</h3>
-          <p>0</p>
-        </div>
-        
+
         <div class="horizontal-box">
           <h3>Upcoming Appointments</h3>
           <p>2</p>
@@ -149,6 +159,40 @@
       </div>
 
     
+      <!-- side bar option 4 -->
+      <div class="content-section" id="content4">
+        <button class="view-all-btn">View All</button> <br> <br>
+        <table>
+            <tr>
+                <th>Reference No.</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Contact No.</th>
+                <th>Email</th>
+                <th>Appointment Date</th>
+                <th>Appointment Time</th>
+                <th>Service Required</th>
+                <th>Status</th>
+            </tr>
+            <tr>
+                <td>6572301954360</td>
+                <td>Marc</td>
+                <td>Shieller</td>
+                <td>+63 9454377521</td>
+                <td>marcjoshua@gmail.com</td>
+                <td>11/10/2023</td>
+                <td>3:45</td>
+                <td>Dental Surgery</td>
+                <td>
+                    <select onchange="changeStatusColor(this)">
+                        <option value="finish">Finish</option>
+                        <option value="ongoing">Ongoing</option>
+                        <option value="waiting">Waiting</option>
+                    </select>
+                </td>
+
+                
+
 
     <script src="../js/sidebar.js"></script>
 </body>
