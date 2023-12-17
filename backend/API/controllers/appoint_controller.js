@@ -45,6 +45,20 @@ const bookAppointment = async (req, res, next) => {
         });
     }
 
+    // Validate appointment time within opening and closing hours
+    const openingTime = '11:00'; // 11:00 am
+    const closingTime = '17:00'; // 5:00 pm
+    const appointmentDateTime = new Date(`${date} ${time}`);
+    const openingDateTime = new Date(`${date} ${openingTime}`);
+    const closingDateTime = new Date(`${date} ${closingTime}`);
+
+    if (appointmentDateTime < openingDateTime || appointmentDateTime > closingDateTime) {
+        return res.status(400).json({
+            successful: false,
+            message: "Appointments can only be booked between 11:00 am and 5:00 pm."
+        });
+    }
+
     let Appoint = {
         first_name: first_name,
         last_name: last_name,
@@ -57,7 +71,7 @@ const bookAppointment = async (req, res, next) => {
         serviceid: serviceid,
         note: note
     };
-
+    
     let query = `
         INSERT INTO appointment_tbl
         (first_name, last_name, middle_name, suffix, contact_no, email, date, time, serviceid, note)
