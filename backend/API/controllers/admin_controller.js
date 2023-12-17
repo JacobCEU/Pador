@@ -121,8 +121,10 @@ const viewAll = async (req, res, next) => {
     try {
         // Query to retrieve appointments for today
         const query = `
-            SELECT status, date, time, serviceid, ref_no
-            FROM appointment_tbl`;
+            SELECT a.ref_no, a.suffix, a.first_name, a.middle_name, a.last_name, a.contact_no, a.email, a.date, a.time, a.serviceid, a.note, a.status, sc.service_name
+            FROM appointment_tbl a
+            INNER JOIN service_choice sc ON a.serviceid = sc.serviceid
+        `;
 
         con_db.database.query(query, (err, rows) => {
             if (err) {
@@ -154,10 +156,17 @@ const viewAll = async (req, res, next) => {
 
                 return {
                     status: appointment.status,
+                    note: appointment.note,
                     date: formattedDate,
                     time: formattedTime,
-                    serviceid: appointment.serviceid,
+                    service_name: appointment.service_name,
                     ref_no: appointment.ref_no,
+                    contact_no: appointment.contact_no,
+                    email: appointment.email,
+                    first_name: appointment.first_name,
+                    middle_name: appointment.middle_name,
+                    last_name: appointment.last_name,
+                    suffix: appointment.suffix,
                 };
             });
 
@@ -175,6 +184,8 @@ const viewAll = async (req, res, next) => {
     }
 };
 
+
+
 const viewToday = async (req, res, next) => {
     try {
         // Get today's date in the format 'YYYY-MM-DD'
@@ -187,11 +198,12 @@ const viewToday = async (req, res, next) => {
             day: 'numeric',
         });
 
-        // Query to retrieve appointments for today
+        // Query to retrieve appointments for today with first_name, last_name, and service_name
         const query = `
-            SELECT status, time, serviceid, ref_no
-            FROM appointment_tbl
-            WHERE date = ?
+            SELECT a.status, a.time, a.ref_no, a.first_name, a.last_name, s.service_name
+            FROM appointment_tbl a
+            INNER JOIN service_choice s ON a.serviceid = s.serviceid
+            WHERE a.date = ?
         `;
 
         con_db.database.query(query, [todayDate], (err, rows) => {
@@ -214,8 +226,10 @@ const viewToday = async (req, res, next) => {
                 return {
                     status: appointment.status,
                     time: formatTime(appointment.time),
-                    serviceid: appointment.serviceid,
+                    service_name: appointment.service_name,
                     ref_no: appointment.ref_no,
+                    first_name: appointment.first_name,
+                    last_name: appointment.last_name,
                 };
             });
 
@@ -232,6 +246,8 @@ const viewToday = async (req, res, next) => {
         });
     }
 };
+
+
 
 const viewSelected = async (req, res, next) => {
     try {

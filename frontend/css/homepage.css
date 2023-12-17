@@ -1,5 +1,8 @@
+
 body {
   overflow-x: hidden;
+  overflow-y: auto; 
+  scroll-behavior: smooth;
 }
 
 
@@ -9,7 +12,7 @@ body {
 .html,body{
   overflow:auto;
   height: 100%;
-  height: 100%;
+  width: 100%;
 }
 .navbar {
   position: absolute;
@@ -158,23 +161,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bookbutton,
 .bookbutton * {
   box-sizing: border-box;
@@ -319,18 +305,21 @@ body {
   max-width: 90%;
 }
 
-.aboutus-button,
-.aboutus-button * {
-  box-sizing: border-box;
-}
-
 .aboutus-button {
   width: 179px;
   height: 34px;
   position: relative;
   left: 760px;
   top: -33px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
+
 .aboutus-base {
   background: #0280c7;
   border-radius: 20px;
@@ -353,6 +342,14 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+
+.aboutus-button:hover,
+.aboutus-button:focus,
+.aboutus-button:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
 .rectangle-1,
 .rectangle-1 * {
   box-sizing: border-box;
@@ -734,8 +731,8 @@ body {
   position: relative;
   width: 331px;
   height: 66px;
-  left: 1142px;
-  top: -322px;
+  left: 1125px;
+  top: -319px;
 }
 .dentalsurgery-image {
   position: absolute;
@@ -744,9 +741,6 @@ body {
   left: 1243px;
   top: 554px;
 }
-
-
-
 
 
 .footer {

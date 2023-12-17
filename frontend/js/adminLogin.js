@@ -91,7 +91,7 @@ function submitLogin(payload) {
     api_client(url, content, (response) => {
         if (response.successful == true) {
             alert(response.message);
-            window.location.href = "../html/adminDashboardMP.html"; 
+            window.location.href = "../html/admin_dashboard.html"; 
         } else {
             alert(response.message);
         }

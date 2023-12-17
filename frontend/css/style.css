@@ -297,7 +297,7 @@ body {
 
 .number {
   background: rgba(132, 130, 131, 0.14);
-  color: rgba(74, 74, 74, 0.25);
+  color: rgb(0, 0, 0);
   text-align: left;
   font-family: "Poppins-Regular", sans-serif;
   font-size: 16px;

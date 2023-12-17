@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
       <!-- Required meta tags -->
@@ -48,16 +47,12 @@
             <div class="container text-center">
                 <h2>BOOK AN APPOINTMENT</h2>
 
-            
+    
             <form action="#" method="POST" onsubmit="clientInfo()">
                 <div class="row">
-                    <div class = "all-textbox"></div>
+                    <div class="all-textbox"></div>
                     <input type="text" class="suffix" id="suffix" name="suffix" placeholder="Suffix *Jr, Sr, III">
-                        
-                      
-        </div>
-
-        
+                </div>
 
         <div class="firstname">
             <input type="text" class="first-name" id="firstName" name="firstName" placeholder="First Name">
@@ -75,51 +70,45 @@
           </div>
           <div class="email">
             <input type="email" class="emailtextbox" id="email" name="email" placeholder="e.g. test@gmail.com">
-            
-            
           </div>
 
-          <div class="preferred-appointment-date">
-            
-               
+
+                <div class="preferred-appointment-date">
                     <input type="date" class="calendardate" id="preferredAppointmentDate" name="preferredAppointmentDate" required>
                 </div>
-            
-        
-            <div class="preferred-appointment-time">
-                <input type="time" class="time" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
-            </div>
-        
-          <div class="service">
-            
-            <select class="service2" id="serviceRequired" name="serviceRequired" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value=1>Dental Bridges</option>
-                <option value=2>Teeth Whitening</option>
-                <option value=3>Cleaning</option>
-                <option value=4>Pain Relief</option>
-            </select>
+
+                <div class="preferred-appointment-time">
+                    <input type="time" class="time" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
+                </div>
+
+                <div class="service">
+                    <select class="service2" id="serviceRequired" name="serviceRequired" required>
+                        <option value="" disabled selected>Select a service</option>
+                        <option value=1>Dental Bridges</option>
+                        <option value=2>Teeth Whitening</option>
+                        <option value=3>Cleaning</option>
+                        <option value=4>Pain Relief</option>
+                    </select>
+                </div>
+
+                <div class="notetextbox">
+                    <textarea type="text" class="notes" id="note" name="note" rows="3"></textarea>
+                </div>
+
+                <div id="submit" type="button" onclick="clientInfo()" class="submit center">
+                    <div class="submit2">
+                        <div class="body">Submit</div>
+                    </div>
+                </div>
+                <div class="text">
+                    For more inquiries or cancellation of an appointment, please contact us or
+                    visit us at our clinic
+                </div>
+            </form>
         </div>
+    </div>
 
-          <div class="notetextbox">
-            <textarea type="text" class="notes" id="note" name="note" rows="3"></textarea>
-          </div>
-
-
-          <div id="submit" type="button"  onclick="clientInfo()" class="submit center">
-            <div class="submit2">
-              <div class="body">Submit</div>
-            </div>
-          </div>
-          <div class="text">
-            For more inquiries or cancellation of an appointment, please contact us or
-            visit us at our clinic
-            </div>
-
-
-           </div>
-           
-
+    
         
     
         </body>
@@ -129,13 +118,15 @@
           <p>Address: 3275 A. Mabini St, Barangay Poblacion. Makati City</p>
           <p>&copy; Copyright 2023 Pador’s Dental Clinic</p>
         </div>
-      
-
-
-      
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
-
-      
     
-  </html>
+       
+      
+
+
+
+    <script src="../js/appoint.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</html>
+`

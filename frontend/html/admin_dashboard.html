@@ -36,19 +36,14 @@
         <div class="drpador">Dr. Pador</div>
     </div>
 
-    <div class="rectangle-32">
-      <div class="finished-appointments-today">Finished Appointments Today </div>
-      <div class="_5">
-        <label for="_5">5</label>
-      </div>
-    
-      </div>
-   
+    <div class="dashboard"> Admin Dashboard </div>
 
-
+    <div class="apps">
+        <div class="num">
+            <label for="num">5</label>        
+        </div>
+        <div class="appointment">Appointments Today</div>
     </div>
-
- 
 
     <div class="rectangle-38">
         <div class="upcoming-appointments">Upcoming Appointments</div>
@@ -57,7 +52,7 @@
         </div>
     </div>
 
-    <div class="rectangle-37">
+    <div class="todayDisplay">
         <div id="today">
             <div class="today"></div>
         </div>
@@ -67,68 +62,25 @@
               <div class="body">View All</div>
           </button>
         </div>
-      
-    
-
-        <div class="time">Time</div>
-        <div class="service">Service</div>
-        <div class="status">Status</div>
-
-        <div class="pm">
-            <div class="_3-00-pm">
-                <label for="_3-00-pm">3:00 PM</label>
-            </div>
-            <div class="_4-00-pm">
-                <label for="_4-00-pm">4:00 PM</label>
-            </div>
-            <div class="_5-00-pm">
-                <label for="_5-00-pm">5:00 PM</label>
-            </div>
-            <div class="_6-00-pm">
-                <label for="_6-00-pm">6:00 PM</label>
-            </div>
-        </div>
-
-
-
-
-
-        <div class="services">
-            <div class="dental-surgery1">
-                <label for="dental-surgery1">Dental Surgery</label>
-            </div>
-            <div class="dental-surgery2">
-                <label for="dental-surgery2">Dental Surgery</label>
-            </div>
-            <div class="dental-surgery3">
-                <label for="dental-surgery3">Dental Surgery</label>
-            </div>
-            <div class="dental-surgery4">
-                <label for="dental-surgery4">Dental Surgery</label>
-            </div>
-        </div>
-
-
-
-
-        
-
-        <div class="statuses">
-            <div class="finished1">
-                <label for="finished1">Finished</label>
-            </div>
-            <div class="finished2">
-                <label for="finished2">Finished</label>
-            </div>
-            <div class="ongoing">
-                <label for="ongoing">Ongoing</label>
-            </div>
-            <div class="waiting">
-                <label for="waiting">Waiting</label>
-            </div>
-        </div>
     </div>
   </div>
+
+
+        <!-- Corrected table structure -->
+        <table class="rectangle-39">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentsTableBody">
+                <!-- Appointments will be populated dynamically here -->
+            </tbody>
+        </table>
+    </div>
 
     <script>
       function redirectToViewAll() {
@@ -139,6 +91,8 @@
     <!-- Optional JavaScript; choose one of the two! -->
     <script src="../js/dateToday.js"></script>
     <script src="../js/adminLogout.js"></script>
+    <script src="../js/appsToday.js"></script>
+
 
     <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
