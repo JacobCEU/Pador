@@ -205,6 +205,7 @@ body {
   width: 179px;
   height: 34px;
   position: relative;
+  
 
 }
 .body {
@@ -1164,5 +1165,20 @@ body {
 
 }
 
+/* footer */
+.footer {
+  background: linear-gradient(180deg, rgba(58, 156, 211, 0.00) 0%, rgba(12, 63, 201, 0.73) 74.06%, rgba(18, 27, 75, 0.82) 100%);
+  padding: 20px;
+  color: black;
 
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens (e.g., mobile phones) */
+  .footer {
+    padding-top: 75px; /* Decrease padding for smaller screens */
+    
+  }
+}
 
