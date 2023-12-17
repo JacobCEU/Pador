@@ -751,6 +751,38 @@ body {
   height: 300px;
   width: 100%; 
 }
+.animated-text {
+  font-size: 36px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1520px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.learn-more-about-us2,
+.services2,
+.dental-implants2,
+.pain-relief2,
+.teeth-whitening2,
+.dental-bridges2,
+.veneers2,
+.tooth-filling2,
+.dental-surgery2,
+.consultation2 {
+  animation: fadeInUp 2s forwards; 
+}
+
 @media (max-width: 903px) {
   .html,body{
     overflow:auto;
