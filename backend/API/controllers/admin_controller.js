@@ -187,9 +187,9 @@ const viewToday = async (req, res, next) => {
             day: 'numeric',
         });
 
-        // Query to retrieve appointments for today
+        // Query to retrieve appointments for today with first_name and last_name
         const query = `
-            SELECT status, time, serviceid, ref_no
+            SELECT status, time, serviceid, ref_no, first_name, last_name
             FROM appointment_tbl
             WHERE date = ?
         `;
@@ -216,6 +216,8 @@ const viewToday = async (req, res, next) => {
                     time: formatTime(appointment.time),
                     serviceid: appointment.serviceid,
                     ref_no: appointment.ref_no,
+                    first_name: appointment.first_name,
+                    last_name: appointment.last_name,
                 };
             });
 
@@ -232,6 +234,7 @@ const viewToday = async (req, res, next) => {
         });
     }
 };
+
 
 const viewSelected = async (req, res, next) => {
     try {
