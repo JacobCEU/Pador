@@ -15,14 +15,16 @@ function fetchTodayAppointments() {
       const appointmentsTableBody = document.getElementById('appointmentsTableBody');
       appointmentsTableBody.innerHTML = ''; // Clear previous content
 
+      console.log('Data:', data);
+
       if (data.successful && data.appointments && data.appointments.length > 0) {
         data.appointments.forEach(appointment => {
           // Append a new row for each appointment
           appointmentsTableBody.innerHTML += `
             <tr>
-              <td>${appointment.firstName} ${appointment.lastName}</td>
+              <td>${appointment.first_name} ${appointment.last_name}</td>
               <td>${formatTime(appointment.time)}</td>
-              <td>${appointment.service}</td>
+              <td>${appointment.service_name}</td>
               <td>${appointment.status}</td>
             </tr>
           `;
