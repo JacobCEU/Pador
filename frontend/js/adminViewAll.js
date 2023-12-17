@@ -4,15 +4,16 @@ document.addEventListener('DOMContentLoaded', function () {
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            const appointmentsTableBody = document.getElementById('appointmentsTableBody');
-            appointmentsTableBody.innerHTML = ''; // Clear previous content
+            const appointmentsTableBody2 = document.getElementById('appointmentsTableBody2');
+            appointmentsTableBody2.innerHTML = ''; // Clear previous content
+            console.log("content: ", data);
 
             if (data.successful && data.appointments && data.appointments.length > 0) {
                 data.appointments.forEach(appointment => {
                     // Shorten the note and append a new row for each appointment
                     const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
 
-                    appointmentsTableBody.innerHTML += `
+                    appointmentsTableBody2.innerHTML += `
                         <tr>
                             <td>${appointment.ref_no}</td>
                             <td>${appointment.suffix}</td>
@@ -39,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             } else {
                 // Display a message if there are no appointments
-                appointmentsTableBody.innerHTML = '<tr><td colspan="11">No appointments available</td></tr>';
+                appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No appointments available</td></tr>';
             }
         })
         .catch(error => {
