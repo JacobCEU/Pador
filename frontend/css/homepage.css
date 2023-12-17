@@ -105,6 +105,64 @@
 }
 
 
+.bookappoinment-container {
+  background: #0280c7;
+  border-radius: 20px;
+  padding: 0px 12px 0px 12px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 179px;
+  height: 34px;
+  position: relative;
+  margin-left: 145px;
+  bottom: 275px;
+}
+
+.bookappoinment {
+  color: #ffffff;
+  text-align: left;
+  font-family: "SuezOne-Regular", sans-serif;
+  font-size: 15px;
+  line-height: 100%;
+  font-weight: 400;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bookappoinment-container, .bookappoinment:hover {
+
+  text-decoration: none; 
+  color: #ffffff; 
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 .bookbutton,
@@ -1063,6 +1121,25 @@
   height: 72px;
   left: 268px;
   top: 679px;
+}
+
+
+.bookappoinment-container{
+  position: relative;
+  bottom: 64px;
+  width: 110px;
+  margin-left: 34px;
+  top: -90px;
+
+
+}
+
+
+.bookappoinment{
+
+  position: relative;
+  font-size: 10px;
+
 }
 
 
