@@ -9,7 +9,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             if (data.successful && data.appointments && data.appointments.length > 0) {
                 data.appointments.forEach(appointment => {
-                    // Append a new row for each appointment
+                    // Shorten the note and append a new row for each appointment
+                    const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
+
                     appointmentsTableBody.innerHTML += `
                         <tr>
                             <td>${appointment.ref_no}</td>
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             <td>${appointment.time}</td>
                             <td>${appointment.service_name}</td>
                             <td>
-                                ${appointment.note}
+                                ${shortenedNote}
                                 <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
                             </td>
                             <td>
