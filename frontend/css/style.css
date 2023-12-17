@@ -16,17 +16,31 @@
     background: rgba(2, 128, 199, 0.30000001192092896);
     
   }
-  .navbar-nav .nav-link {
-    color: #ffffff; 
-}
-
+  
   .logo{
     height: 90px;
     margin-left: 5px
     
   
     }
+    .nav-link2 {
+      color: white;
+  }
+  .first-name,.last-name,.emailtextbox,.calendardate,.emailtextbox,.number,.suffix::placeholder {
+   padding-left: 10px;
+}
+  .image-pador2{
+    
+      margin-top: 115px;
   
+  }
+  .nav-nav, .ml-auto{
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+  }
   
   .desktop-1 {
       background: #ffffff;
