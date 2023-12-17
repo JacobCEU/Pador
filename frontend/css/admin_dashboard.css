@@ -186,13 +186,11 @@ border-radius: 8px;
         border-style: solid;
         border-color: #8c8c8c;
         border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
+        width: 1000px;
+        height: 400px;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 390px;
-        margin-right: 456px;
-        right: 0;
+        margin-top: 50px;
+        margin-left: 5px;
         
       }
 
@@ -730,21 +728,15 @@ border-radius: 8px;
 
 
     @media screen and (max-width: 1000px) {
-    .rectangle-39 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 600px;
-        left: 25px;
-       
-        
+      .rectangle-39 {
+          width: 451px; /* Adjust the width */
+          height: 225px; /* Adjust the height */
+          position: absolute;
+          box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+          margin-top: 600px;
+          left: 25px;
       }
+    
 
       .notifications {
         color: #4a4a4a;

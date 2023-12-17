@@ -84,32 +84,20 @@
           </button>
         </div>
 
-
-        <!-- Columns  -->
-        <div class ="columns">
-            <div class="name">Name</div>
-            <div class="time">Time</div>
-            <div class="service">Service</div>
-            <div class="status">Status</div>
-        </div>
-        <!-- Name row -->
-        <div class="name" id="namesRows">
-            <!-- Names will be populated dynamically here -->
-        </div>
-        <!-- Time row -->
-        <div class="time" id="timeRows">
-            <!-- Time will be populated dynamically here -->
-        </div>
-
-        <!-- Service row -->
-        <div class="service" id="serviceRows">
-            <!-- Service will be populated dynamically here -->
-        </div>
-
-        <!-- Status row -->
-        <div class="status" id="statusRows">
-            <!-- Status will be populated dynamically here -->
-        </div>
+        <!-- Corrected table structure -->
+        <table class="rectangle-39">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Time</th>
+                    <th>Service</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="appointmentsTableBody">
+                <!-- Appointments will be populated dynamically here -->
+            </tbody>
+        </table>
     </div>
 
     <script>
