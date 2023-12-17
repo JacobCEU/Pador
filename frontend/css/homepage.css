@@ -191,6 +191,7 @@ body {
   width: 179px;
   height: 34px;
   position: relative;
+  
 
 }
 .body {
@@ -304,18 +305,21 @@ body {
   max-width: 90%;
 }
 
-.aboutus-button,
-.aboutus-button * {
-  box-sizing: border-box;
-}
-
 .aboutus-button {
   width: 179px;
   height: 34px;
   position: relative;
   left: 760px;
   top: -33px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
 }
+
 .aboutus-base {
   background: #0280c7;
   border-radius: 20px;
@@ -338,6 +342,14 @@ body {
   align-items: center;
   justify-content: flex-start;
 }
+
+.aboutus-button:hover,
+.aboutus-button:focus,
+.aboutus-button:active {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
 .rectangle-1,
 .rectangle-1 * {
   box-sizing: border-box;
@@ -739,6 +751,38 @@ body {
   height: 300px;
   width: 100%; 
 }
+.animated-text {
+  font-size: 36px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 2s forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(1520px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.learn-more-about-us2,
+.services2,
+.dental-implants2,
+.pain-relief2,
+.teeth-whitening2,
+.dental-bridges2,
+.veneers2,
+.tooth-filling2,
+.dental-surgery2,
+.consultation2 {
+  animation: fadeInUp 2s forwards; 
+}
+
 @media (max-width: 903px) {
   .html,body{
     overflow:auto;
@@ -1147,5 +1191,20 @@ body {
 
 }
 
+/* footer */
+.footer {
+  background: linear-gradient(180deg, rgba(58, 156, 211, 0.00) 0%, rgba(12, 63, 201, 0.73) 74.06%, rgba(18, 27, 75, 0.82) 100%);
+  padding: 20px;
+  color: black;
 
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  /* Adjust styles for smaller screens (e.g., mobile phones) */
+  .footer {
+    padding-top: 75px; /* Decrease padding for smaller screens */
+    
+  }
+}
 
