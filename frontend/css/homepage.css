@@ -344,10 +344,15 @@ body {
 
 .aboutus-button:hover,
 .aboutus-button:focus,
-.aboutus-button:active {
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-  transform: scale(1.1);
+.aboutus-button:active,
+.bookappoinment-container:hover,
+.bookappoinment-container:focus,
+.bookappoinment-container:active 
+{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+  transform: scale(1.1); 
 }
+
 
 .rectangle-1,
 .rectangle-1 * {
