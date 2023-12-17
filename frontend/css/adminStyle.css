@@ -1,6 +1,6 @@
 .header {
     background: rgba(2, 128, 199, 0.6);
-    height: 454px;
+    height: 400px;
 }
 .navbar {
     position: relative;
@@ -23,7 +23,7 @@
     width: 300px;
     margin: 0 auto;
     width: 988px;
-    height: 949px;
+    height: 600px;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -31,6 +31,7 @@
     align-content: center;
     flex-wrap: nowrap;
     margin-top: 74px;
+    margin-bottom: 100px;
 }
 
 .form input {
@@ -106,8 +107,8 @@
     font-weight: 400;
     line-height: normal;
     position: absolute;
-    left: 781px;
-    top: 198px;
+    left: 580px;
+    top: 180px;
 }
 .container {
     margin-top: 3%;
