@@ -56,10 +56,9 @@ border-radius: 8px;
 }
 
 .pador{
-
     float: left;
-    padding-top: 50px;
-    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 250px;
     width: 306px;
     color: #FFF;
     font-family: Suez One;
@@ -133,7 +132,7 @@ border-radius: 8px;
         position: relative;
         overflow: visible;
         margin-top: 25px;
-        margin-right: 18px;
+        margin-right: 10px;
     }
 
 
@@ -170,7 +169,7 @@ border-radius: 8px;
       position: absolute;
       box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
       margin-top: 390px;
-      left: -250px;
+      left: 550px;
   }
 
       .finished-appointments-today {
@@ -280,7 +279,7 @@ border-radius: 8px;
     box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
     margin-top: 644px;
     top: -10px;
-    right: 707px;
+    right: 517px;
 }
       
       .upcoming-appointments{
@@ -606,8 +605,9 @@ border-radius: 8px;
 
         position: absolute;
         right: 0;
-        margin-top: 18px;
-        margin-right: 16px;
+        margin-top: 15px;
+        right: -370px;
+        
 
 
         
@@ -672,8 +672,8 @@ border-radius: 8px;
             height: 195px;
             position: absolute;
             box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-            margin-top: 390px;
-            margin-left: 225px;
+            margin-top: 420px;
+            margin-left: 275px;
             
           }
     
@@ -772,7 +772,7 @@ border-radius: 8px;
         height: 195px;
         position: absolute;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 1031px;
+        margin-top: 681px;
         margin-right: 209px;
         margin-left: 25px;
         left: 0;
