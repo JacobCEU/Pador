@@ -392,16 +392,15 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
-  
   position: relative;
   top: 170px;
-  left: 41px;
+  left: 40px;
 }
 
 .dental-implants2 {
   color: #4a4a4a;
   text-align: center;
-  font: 400 28px "Poppins-Regular", sans-serif;
+  font: 400 22px "Poppins-Regular", sans-serif;
   position: relative;
   width: 306px;
   justify-content: center;
@@ -420,7 +419,7 @@
 .dentalimplants {
   color: #4a4a4a;
   text-align: left;
-  font: 400 13px "Poppins-Regular", sans-serif;
+  font: 400 12px "Poppins-Regular", sans-serif;
   position: relative;
   width: 261px;
   height: 60px;
@@ -434,11 +433,11 @@
 .painrelief {
   color: rgba(0, 0, 0, 0.74);
   text-align: center;
-  font: 400 13px "Poppins-Regular", sans-serif;
+  font: 400 11px "Poppins-Regular", sans-serif;
   position: relative;
   width: 397px;
   height: 70px;
-  left: 380px;
+  left: 330px;
   top: 69px;
   max-width: 50%;
 }
@@ -448,6 +447,7 @@
   box-sizing: border-box;
 }
 
+
 .pain-relief {
   width: 306px;
   height: 42px;
@@ -456,20 +456,20 @@
 .pain-relief2 {
   color: #4a4a4a;
   text-align: center;
-  font: 400 28px "Poppins-Regular", sans-serif;
+  font: 400 22px "Poppins-Regular", sans-serif;
   position: absolute;
   right: 0%;
-  left: 400px;
+  left: 374px;
   width: 100%;
   bottom: 0%;
-  top: -40px;
+  top: -32px;
   height: 100%;
 }
 .image-painrelief {
   position: absolute;
   width: 90px;
   height: 60px;
-  left: 506px;
+  left: 476px;
   top: 287px;
 }
 
@@ -485,7 +485,7 @@
 .teeth-whitening2 {
   color: #4a4a4a;
   text-align: center;
-  font: 400 28px "Poppins-Regular", sans-serif;
+  font: 400 22px "Poppins-Regular", sans-serif;
   position: absolute;
   right: 0%;
   width: 100%;
@@ -513,7 +513,7 @@
   position: absolute; 
   width: 172px;
   height: 148px;
-  left: 970px;
+  left: 858px;
   top: 250px;
 }
 .dental-bridges,
@@ -567,16 +567,17 @@
   width: 306px;
   height: 42px;
   position: relative;
+  
 }
 .veneers2 {
   color: #4a4a4a;
   text-align: center;
-  font: 400 28px "Poppins-Regular", sans-serif;
+  font: 400 22px "Poppins-Regular", sans-serif;
   position: absolute;
   right: 0%;
-  left: 10px;
+  left: 2px;
   width: 100%;
-  top: -227%;
+  bottom: 85px;
   height: 100%;
 }
 .veneers-text,
@@ -587,7 +588,7 @@
 .veneers-text {
   color: rgba(0, 0, 0, 0.74);
   text-align: center;
-  font: 400 13px "Poppins-Regular", sans-serif;
+  font: 400 12px "Poppins-Regular", sans-serif;
   position: relative;
   width: 265px;
   height: 66px;
@@ -600,7 +601,7 @@
   width: 141px;
   height: 90px;
   left: 85px;
-  top: 547px;
+  top: 543px;
 }
 .tooth-filling,
 .tooth-filling * {
@@ -614,14 +615,14 @@
 .tooth-filling2 {
   color: #4a4a4a;
   text-align: center;
-  font: 400 28px "Poppins-Regular", sans-serif;
+  font: 400 22px "Poppins-Regular", sans-serif;
   position: absolute;
   right: 0%;
-  left: 400px;
+  left: 380px;
   width: 100%;
   bottom: 0%;
   height: 100%;
-  top: -477%;
+  top: -460%;
 }
 .toothfillings,
 .toothfillings
@@ -631,18 +632,18 @@
 .toothfillings {
   color: rgba(0, 0, 0, 0.74);
   text-align: center;
-  font: 400 13px "Poppins-Regular", sans-serif;
+  font: 400 11px "Poppins-Regular", sans-serif;
   position: relative;
   width: 331px;
   height: 66px;
-  left: 388px;
+  left: 364px;
   top: -104px;
 }
 .toothfilling-image {
   position: absolute;
   width: 109px;
   height: 66px;
-  left: 508px;
+  left: 488px;
   top: 553px;
 }
 .consultation,
@@ -1031,11 +1032,11 @@
   font: 400 20px "Poppins-Regular", sans-serif;
   position: absolute;
   right: 0%;
-  left: 161px;
+  left: 165px;
   width: 100%;
   bottom: 0%;
   height: 100%;
-  top: -477%;
+  top: -480%;
 }
 
 .toothfilling-image {
