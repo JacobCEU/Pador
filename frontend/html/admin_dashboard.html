@@ -73,7 +73,7 @@
         </div>
     </div>
 
-    <div class="rectangle-37">
+    <div class="todayDisplay">
         <div id="today">
             <div class="today"></div>
         </div>
@@ -84,29 +84,32 @@
           </button>
         </div>
 
-        <div class="name">Name</div>
-        <div class="time">Time</div>
-        <div class="service">Service</div>
-        <div class="status">Status</div>
 
-        <!-- Name section -->
-        <div class="name" id="namesContainer">
+        <!-- Columns  -->
+        <div class ="columns">
+            <div class="name">Name</div>
+            <div class="time">Time</div>
+            <div class="service">Service</div>
+            <div class="status">Status</div>
+        </div>
+        <!-- Name row -->
+        <div class="name" id="namesRows">
             <!-- Names will be populated dynamically here -->
         </div>
-        <!-- Time section -->
-        <div class="time">Time</div>
+        <!-- Time row -->
+        <div class="time" id="timeRows">
+            <!-- Time will be populated dynamically here -->
+        </div>
 
-        <!-- Service section -->
-        <div class="service">Service</div>
+        <!-- Service row -->
+        <div class="service" id="serviceRows">
+            <!-- Service will be populated dynamically here -->
+        </div>
 
-        <!-- Status section -->
-        <div class="status">Status</div>
-
-        <!-- Time slots will be populated dynamically here -->
-        <div class="pm" id="timeSlots"></div>
-
-        <!-- Service types will be populated dynamically here -->
-        <div class="services" id="serviceTypes"></div>
+        <!-- Status row -->
+        <div class="status" id="statusRows">
+            <!-- Status will be populated dynamically here -->
+        </div>
     </div>
 
     <script>

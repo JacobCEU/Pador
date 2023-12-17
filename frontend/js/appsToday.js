@@ -1,4 +1,3 @@
-
 let url = `http://localhost:8000/admin/viewToday`;
 fetchInfo(url);
 
@@ -17,55 +16,76 @@ function api_client(url, content, callback) {
       return response.json();
     })
     .then(data => {
-    console.log('Data from server:', data);
-    const appstodayDiv = document.getElementById("appsToday");
-    const appointments = data.data;
+      console.log('Data from server:', data);
+      const namesRow = document.getElementById("namesRows");
+      const timeRow = document.getElementById("timeRows");
+      const serviceRow = document.getElementById("serviceRows");
+      const statusRow = document.getElementById("statusRows");
 
-    console.log(appointments);
+      namesRow.innerHTML = ""; // Clear previous content
+      timeRow.innerHTML = "";
+      serviceRow.innerHTML = "";
+      statusRow.innerHTML = "";
 
-    if (appointments && appointments.length > 0) {
-        appstodayDiv.innerHTML = ""; // Clear previous content
+      const appointments = data.data;
 
+      console.log(appointments);
+
+      if (appointments && appointments.length > 0) {
         appointments.forEach(appointment => {
-            appstodayDiv.innerHTML += `
-                <div class="name">
-                    <label>${appointment.firstName} ${appointment.lastName}</label>
-                </div>
-                <div class="time">
-                    <label for="${appointment.time}">${formatTime(appointment.time)}</label>
-                </div>
-                <div class="service">
-                    <label for="${appointment.service.toLowerCase().replace(/\s+/g, '-')}">${appointment.service}</label>
-                </div>
-                <div class="status">
-                    <label for="${appointment.status.toLowerCase()}">${appointment.status}</label>
-                </div>
-                `;
-            });
-        } else {
-        appstodayDiv.textContent = "No appointments today";
-    }
+          // Populate Name row
+          namesRow.innerHTML += `
+            <div class="name">
+                <label>${appointment.firstName} ${appointment.lastName}</label>
+            </div>
+          `;
 
-  })
+          // Populate Time row
+          timeRow.innerHTML += `
+            <div class="time">
+                <label for="${appointment.time}">${formatTime(appointment.time)}</label>
+            </div>
+          `;
+
+          // Populate Service row
+          serviceRow.innerHTML += `
+            <div class="service">
+                <label for="${appointment.service.toLowerCase().replace(/\s+/g, '-')}">${appointment.service}</label>
+            </div>
+          `;
+
+          // Populate Status row
+          statusRow.innerHTML += `
+            <div class="status">
+                <label for="${appointment.status.toLowerCase()}">${appointment.status}</label>
+            </div>
+          `;
+        });
+      } else {
+        namesRow.textContent = "No appointments today";
+        timeRow.textContent = "";
+        serviceRow.textContent = "";
+        statusRow.textContent = "";
+      }
+    })
     .catch(error => {
       console.error('Error:', error);
     });
 }
 
 function fetchInfo(url) {
-  
-    let content = {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    };
-  
-    api_client(url, content, (response) => {
-      if (response.successful === true) {
-        alert(response.message);
-      } else {
-        alert("No appointments today");
-      }
-    });
+  let content = {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  };
+
+  api_client(url, content, (response) => {
+    if (response.successful === true) {
+      alert(response.message);
+    } else {
+      alert("No appointments today");
+    }
+  });
 }

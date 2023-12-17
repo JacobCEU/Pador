@@ -309,13 +309,13 @@ border-radius: 8px;
       }
 
 
-      .rectangle-37 {
+      .todayDisplay {
         background: #ffffff;
         border-radius: 20px;
         border-style: solid;
         border-color: #adacac;
         border-width: 1px;
-        width: 957px;
+        width: 1100px;
         height: 582px;
         position: absolute;
         box-shadow: 5px 5px 4px 0px rgba(116, 116, 116, 0.25);
@@ -385,13 +385,27 @@ border-radius: 8px;
         justify-content: flex-start;
       }
 
+      .columns{
+        
+      }
+
+      .name {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 20px;
+        top: 20px;
+      }
+
+
 
       .time {
         color: #4a4a4a;
         text-align: left;
         font: 400 30px "Poppins-Regular", sans-serif;
         position: relative;
-        padding-left: 128px;
+        padding-left: 200px;
         top: 17px;
 
       }
@@ -868,7 +882,7 @@ border-radius: 8px;
     @media screen and (max-width: 1000px) {
 
 
-    .rectangle-37 {
+    .todayDisplay {
       background: #ffffff;
       border-radius: 20px;
       border-style: solid;
