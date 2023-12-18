@@ -91,17 +91,17 @@ body {
 }
 
 .submit-button {
-    display: flex;
-    flex-direction: row;
-    gap: 0px;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 2; /* Ensure the close button is on top */
-    margin-top: 20px; /* Adjust the top margin as needed */
+  display: flex;
+  flex-direction: row;
+  gap: 0px;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  gap: 7px;
 }
-
 .submitbutton2 {
     background: #0280c7;
     border: none;
