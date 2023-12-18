@@ -14,8 +14,8 @@ function fetchTodayAppointments() {
     .then(data => {
       const appointmentsTableBody = document.getElementById('appointmentsTableBody');
       appointmentsTableBody.innerHTML = ''; // Clear previous content
+      console.log("content: ", data);
 
-      console.log('Data:', data);
 
       if (data.successful && data.appointments && data.appointments.length > 0) {
         data.appointments.forEach(appointment => {

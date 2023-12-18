@@ -30,7 +30,6 @@
         <!-- Option 1, 2, 3 -->
      
         <a href="#" onclick="showContent(1)">Today's Appointment</a> 
-        <a href="#" onclick="showContent(2)">View Appointment</a> 
         <a href="#" onclick="showContent(3)">Status</a> 
         <a href="#" onclick="showContent(4)">Dashboard View all</a> 
 
@@ -52,87 +51,29 @@
             <h3 class="apptxt">Appointment</h3>
             
             <!-- Box containing specific content -->
+            <div class="today"></div>
+
             <table>
                 <thead>
                     <tr>
+                        <th>Name</th>
                         <th>Time</th>
                         <th>Service</th>
                         <th>Status</th>
-                        <th>Actions</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Placeholder rows, replace with data from the database -->
-                    <tr>
-                        <td>10:00 AM</td>
-                        <td>Dental Check Up</td>
-                        <td>Ongoing</td>
-                        <td>
-                            <button onclick="viewDetails()">Details</button>
-                            <button class="cancel-btn" onclick="cancelAppointment()">Cancel</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2:00 PM</td>
-                        <td>Massage</td>
-                        <td>Finished</td>
-                        <td>
-                            <button onclick="viewDetails()">Details</button>
-                            <button class="delete-btn" onclick="deleteAppointment()">Delete</button>
-                        </td>
-                    </tr>
-                    <!-- Add more rows as needed -->
-                </tbody>
+                
+                <tbody id="appointmentsTableBody">
+                <!-- Appointments will be populated dynamically here -->
+            </tbody>
             </table>
+        
         </div>
 
 
 
     
-<!-- option2 (appointment data) -->
-<div class="content-section" id="content2">
-    <h1 class="viewapptxt">View Appointment</h1><br>
 
-    <!-- Upper Part of the Table -->
-    <div class="upper-part">
-        <h2>Today: <span id="current-date-time"></span></h2>
-        <button class="view-all-btn">View All</button>
-    </div>
-
-    <!-- Table for Time, Service, and Status -->
-    <table>
-        <thead>
-            <tr>
-                <th>Time</th>
-                <th>Service</th>
-                <th>Status</th>
-                <th>Actions</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Placeholder rows, replace with data from the database -->
-            <tr>
-                <td>10:00 AM</td>
-                <td>Dental Check Up</td>
-                <td>Ongoing</td>
-                <td>
-                    <button onclick="viewDetails()">Details</button>
-                    <button class="cancel-btn" onclick="cancelAppointment()">Cancel</button>
-                </td>
-            </tr>
-            <tr>
-                <td>2:00 PM</td>
-                <td>Massage</td>
-                <td>Finished</td>
-                <td>
-                    <button onclick="viewDetails()">Details</button>
-                </td>
-            </tr>
-            <!-- Add more rows as needed -->
-        </tbody>
-    </table>
-</div>
-    
 
 
 
@@ -174,26 +115,19 @@
                 <th>Service Required</th>
                 <th>Status</th>
             </tr>
-            <tr>
-                <td>6572301954360</td>
-                <td>Marc</td>
-                <td>Shieller</td>
-                <td>+63 9454377521</td>
-                <td>marcjoshua@gmail.com</td>
-                <td>11/10/2023</td>
-                <td>3:45</td>
-                <td>Dental Surgery</td>
-                <td>
-                    <select onchange="changeStatusColor(this)">
-                        <option value="finish">Finish</option>
-                        <option value="ongoing">Ongoing</option>
-                        <option value="waiting">Waiting</option>
-                    </select>
-                </td>
-
+                <tbody id="appointmentsTableBody2">
+                    <!-- Appointments will be populated dynamically here -->
+                </tbody>
+                
+        </table>
                 
 
 
     <script src="../js/sidebar.js"></script>
+    <script src="../js/dateToday.js"></script>
+    <script src="../js/adminLogout.js"></script>
+    <script src="../js/appsToday.js"></script>
+    <script src="../js/adminViewAll.js"></script>
 </body>
+
 </html>
