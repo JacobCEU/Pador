@@ -1,3 +1,35 @@
+//changes
+function showContent(option) {
+  // Hide all content sections
+  const contentSections = document.querySelectorAll('.content-section');
+  contentSections.forEach(section => {
+      section.style.display = 'none';
+  });
+
+  // Show the selected content
+  const selectedContent = document.getElementById(`content${option}`);
+  if (selectedContent) {
+      selectedContent.style.display = 'block';
+  }
+
+  // Store the selected option in localStorage
+  localStorage.setItem('selectedOption', option);
+}
+
+// Function to open sidebar and show content for the stored option
+function initializePage() {
+  openNav();  // Open sidebar
+
+  // Retrieve the stored option from localStorage
+  const storedOption = localStorage.getItem('selectedOption');
+
+  // Show content for the stored option or default to option 1
+  showContent(storedOption || 1);
+}
+
+// Attach the initializePage function to the window onload event
+window.onload = initializePage;
+//pang sidebar para hindi may collapse kada may papalitan
 
 function openNav() {
   document.getElementById("sidebar").style.width = "250px";
