@@ -29,7 +29,7 @@ function initializePage() {
 
 // Attach the initializePage function to the window onload event
 window.onload = initializePage;
-//pang sidebar para hindi may collapse kada may papalitan
+//pang sidebar para hindi may collapse kada may papalitan sidebar changes
 
 function openNav() {
   document.getElementById("sidebar").style.width = "250px";
