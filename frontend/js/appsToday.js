@@ -23,7 +23,7 @@ function fetchTodayAppointments() {
           appointmentsTableBody.innerHTML += `
             <tr>
               <td>${appointment.first_name} ${appointment.last_name}</td>
-              <td>${formatTime(appointment.time)}</td>
+              <td>${appointment.time}</td>
               <td>${appointment.service_name}</td>
               <td>${appointment.status}</td>
             </tr>

@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">
                                     ${appointment.status === 'Canceled' ? 'Delete' : 'Cancel'}
                                 </button>
+                                <button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>
                             </td>
                         </tr>
                     `;
@@ -75,6 +76,28 @@ function cancelAppointment(refNo, currentStatus) {
             if (data.successful) {
                 alert('Appointment canceled successfully');
                 location.reload(); // Reload the page after cancellation
+            } else {
+                alert('Error: ' + data.message);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+}
+
+// Function to finish an appointment
+function finishAppointment(refNo) {
+    let url = `http://localhost:8000/admin/finish/${refNo}`;
+
+    // Update the status to "Finished"
+    fetch(url, {
+        method: 'PUT',
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.successful) {
+                alert('Appointment finished successfully');
+                location.reload(); // Reload the page after finishing
             } else {
                 alert('Error: ' + data.message);
             }

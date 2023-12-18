@@ -7,5 +7,4 @@ appointRouter.get('/appointment', appointController.viewAppointmentByID)
 appointRouter.get('/searchAppointment', appointController.searchRef);
 
 
-
 module.exports = appointRouter

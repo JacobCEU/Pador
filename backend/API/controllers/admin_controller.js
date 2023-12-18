@@ -391,6 +391,71 @@ const cancelAppointment = async (req, res, next) => {
     }
 };
 
+const countAppointmentsByStatus = async (req, res, next) => {
+    try {
+        const countQuery = `
+            SELECT 
+                (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Finished') as finishedCount,
+                (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Ongoing') as ongoingCount
+        `;
+
+        con_db.database.query(countQuery, (err, rows) => {
+            if (err) {
+                return res.status(500).json({
+                    successful: false,
+                    message: 'Internal Server Error',
+                });
+            }
+
+            const result = {
+                successful: true,
+                finishedCount: rows[0].finishedCount,
+                ongoingCount: rows[0].ongoingCount,
+            };
+
+            return res.status(200).json(result);
+        });
+    } catch (error) {
+        return res.status(500).json({
+            successful: false,
+            message: 'Internal Server Error',
+        });
+    }
+};
+
+const finishAppointment = async (req, res, next) => {
+    try {
+        const refNo = req.params.ref_no;
+
+        // Update status to Finished
+        const updateQuery = `
+            UPDATE appointment_tbl
+            SET status = 'Finished'
+            WHERE ref_no = ?
+        `;
+
+        con_db.database.query(updateQuery, [refNo], (err) => {
+            if (err) {
+                return res.status(500).json({
+                    successful: false,
+                    message: 'Internal Server Error',
+                });
+            }
+
+            return res.status(200).json({
+                successful: true,
+                message: 'Appointment marked as Finished successfully',
+            });
+        });
+    } catch (error) {
+        return res.status(500).json({
+            successful: false,
+            message: 'Internal Server Error',
+        });
+    }
+};
+
+
 // Function to format time
 const formatTime = (timeString) => {
     const [hours, minutes] = timeString.split(':');
@@ -405,5 +470,7 @@ module.exports = {
     viewAll,
     viewToday,
     viewSelected,
+    countAppointmentsByStatus,
+    finishAppointment,
     cancelAppointment
 };
