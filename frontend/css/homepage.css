@@ -1000,6 +1000,13 @@ body {
   max-width: 30%;
 }
 
+.catch-attention-text{
+  display:none;
+}
+.bookappoinment,.bookappoinment-container{
+  display:none;
+}
+
 .teethwhitening-image {
   position: absolute;
   width: 132px;
