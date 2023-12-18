@@ -26,7 +26,7 @@
     .nav-link2 {
       color: white;
   }
-  .first-name,.last-name,.emailtextbox,.calendardate,.emailtextbox,.number,.suffix::placeholder {
+  .first-name,.middlename,.last-name,.emailtextbox,.calendardate,.emailtextbox,.number,.suffix::placeholder {
    padding-left: 10px;
 }
   .image-pador2{
@@ -211,6 +211,33 @@ body {
   width: 193px;
 }
 
+.middlename,
+.middlename * {
+  box-sizing: border-box;
+}
+.middlename {
+  background: rgba(132, 130, 131, 0.14);
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 100px;
+  top: 40px;
+  font-size: 12px;
+}
+.middlename {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 350px;
+  top: 105px;
+  width: 235px;
+}
+
 .firstname,
 .firstname * {
   box-sizing: border-box;
@@ -360,7 +387,7 @@ body {
 }
 .calendardate {
   
-  width: 227px;
+  width: 237px;
   height: 45px;
   position: relative;
   overflow: hidden;
@@ -423,7 +450,7 @@ body {
 }
 .service2 {
   background: rgba(132, 130, 131, 0.14);
-  width: 243.93px;
+  width: 237.93px;
   height: 45.82px;
   position: relative;
   overflow: hidden;
@@ -496,7 +523,7 @@ body {
 .submit2 {
   background: #0280c7;
   border-radius: 20px;
-  padding: 0px 12px 0px 12px;
+  padding: 2px 15px 1px 13px;
   display: flex;
   flex-direction: row;
   gap: 6px;
@@ -504,7 +531,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   width: 179px;
-  height: 34px;
+  height: 33px;
   position: relative;
 }
 .body {
@@ -528,15 +555,16 @@ body {
   color: #fe0000;
   text-align: left;
   font-family: "Poppins-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   opacity: 0.8999999761581421;
   position: relative;
-  width: 538px;
+  width: 494px;
   height: 74px;
   left: 40px;
-  top: 290px;
+  top: 296px;
   text-align: center;
+  max-width: 80%;
 }
 
 .footer {
@@ -583,6 +611,20 @@ body {
     width: 227px;
     height: 45px;
 }
+.middlename {
+  background: rgba(132, 130, 131, 0.14);
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  left: -5px;
+  top: 54px;
+  width: 230px;
+  height: 43px;
+}
 .last-name {
   background: rgba(132, 130, 131, 0.14);
   color: #4a4a4a;
@@ -606,7 +648,7 @@ body {
   position: relative;
   overflow: hidden;
   left: 59px;
-  top: 80px;
+  top: 134px;
   border-color: black;
   border: solid;
   border-width: thin;
@@ -621,9 +663,10 @@ body {
   opacity: 0.8999999761581421;
   position: relative;
   right: -36px;
-  top: 30px;
+  top: 85px;
   width: 145px;
-  height: 46px;
+  height: 48px;
+  margin-top: -2px;
 }
 .email {
   background: rgba(132, 130, 131, 0.14);
@@ -635,7 +678,7 @@ body {
   position: absolute;
   left: 78px;
   bottom: 632px;
-  bottom: 492px;
+  bottom: 506px;
 }
 .emailtextbox {
   background: rgba(132, 130, 131, 0.14);
@@ -645,12 +688,12 @@ body {
   overflow: hidden;
 }
 .calendardate {
-  width: 227px;
+  width: 229px;
   height: 45px;
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 350px;
+  top: 391px;
   background: rgba(132, 130, 131, 0.14);
 }
 .time {
@@ -659,7 +702,7 @@ body {
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 490px;
+  top: 529px;
   background: rgba(132, 130, 131, 0.14);
 }
 .preferred-appointment-date {
@@ -690,22 +733,22 @@ body {
 }
 .service2 {
   background: rgba(132, 130, 131, 0.14);
-  width: 243.93px;
+  width: 230.93px;
   height: 45.82px;
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 30px;
+  top: 68px;
   font-family: "Poppins-Regular", sans-serif;
 }
 .notetextbox {
   background: rgba(132, 130, 131, 0.14);
   width: 372px;
-  height: 159px;
+  height: 119px;
   position: relative;
   overflow: hidden;
   left: -12px;
-  top: 283px;
+  top: 281px;
 }
 
 .notes {
@@ -718,10 +761,9 @@ body {
   opacity: 0.8999999761581421;
   left: 15px;
   top: 18px;
-  width: 372px;
-  height: 159px;
+  width: 368px;
+  height: 118px;
 }
-
 .submit {
   display: flex;
   flex-direction: row;
@@ -747,7 +789,7 @@ body {
   width: 494px;
   height: 74px;
   left: 40px;
-  top: 348px;
+  top: 328px;
   text-align: center;
   max-width: 80%;
 }

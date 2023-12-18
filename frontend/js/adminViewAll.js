@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 data.appointments.forEach(appointment => {
                     // Shorten the note and append a new row for each appointment
                     const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
-
+``
                     appointmentsTableBody.innerHTML += `
                         <tr>
                             <td>${appointment.ref_no}</td>
