@@ -182,9 +182,10 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
-  left: 73px;
-  top: 40px;
+  left: 75px;
+  top: 38px;
   font-size: 12px;
+  padding-left: 4px;
 }
 .suffixes {
   color: #4a4a4a;
@@ -300,7 +301,7 @@ body {
   height: 27px;
   position: absolute;
   left: 6px;
-  top: 13px;
+  top: 10px;
 }
 ._63 {
   color: #4a4a4a;
@@ -311,7 +312,7 @@ body {
   opacity: 0.8999999761581421;
   position: absolute;
   left: 38px;
-  top: 17px;
+  top: 14px;
   width: 37px;
   height: 23px;
 }
@@ -332,7 +333,7 @@ body {
   opacity: 0.8999999761581421;
   position: relative;
   right: 90px;
-  top: 17px;
+  top: 19px;
   width: 145px;
   height: 46px;
 }
@@ -346,6 +347,7 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
+  top: -3px;
   
 }
 .email {
@@ -421,6 +423,7 @@ body {
   left:330px;
   top:350px;
   background: rgba(132, 130, 131, 0.14);
+  padding-left: 4px;
 }
 .preferred-appointment-time {
   
@@ -500,6 +503,7 @@ body {
   top: 18px;
   width: 530px;
   height: 159px;
+  padding-left: 7px;
 }
 
 .submit,
@@ -561,7 +565,7 @@ body {
   position: relative;
   width: 494px;
   height: 74px;
-  left: 40px;
+  left: 72px;
   top: 296px;
   text-align: center;
   max-width: 80%;
@@ -575,6 +579,11 @@ body {
     height: 300px;
     width: 100%; 
   }
+
+  .suffix::placeholder {
+    left: 13px;
+  }
+  
 
   @media (max-width: 768px)  {
     .container {
