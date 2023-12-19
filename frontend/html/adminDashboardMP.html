@@ -98,17 +98,18 @@
             <table>
                 <tr>
                     <th>Reference No.</th>
-                    <th>Middle Name</th>
-                    <th>First Name</th>
                     <th>Suffix</th>
+                    <th>First Name</th>
+                    <th>Middle Name</th>
                     <th>Last Name</th>
                     <th>Contact No.</th>
                     <th>Email</th>
                     <th>Appointment Date</th>
                     <th>Appointment Time</th>
-                    <th>Service Required</th>
+                    <th>Service</th>
                     <th>Status</th>
-                    <th>Action</th>
+                    <!-- <th>Payment Status</th> -->
+                    <th>Note</th>
                 </tr>
                 
                 <tbody id="appointmentsTableBody2">
@@ -117,9 +118,10 @@
                 
             </table>
             <div class="pagination">
-                <button onclick="changePage(-1)">Previous</button>
-                <span id="currentPage">1</span>
                 <button onclick="changePage(1)">Next</button>
+                
+                <span id="currentPage">1</span>
+                <button onclick="changePage(-1)">Previous</button>
               </div>
         </div>
     </div>

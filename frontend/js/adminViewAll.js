@@ -47,11 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
                                     ${shortenedNote}
                                     ${viewNoteButton}
                                 </td>
+                                
                                 <td>
                                     ${appointment.status}
                                     ${cancelBtn}
                                     ${finishBtn}
                                     ${deleteBtn}
+                                </td>
+                                <td>
+                                    ${shortenedNote}
+                                    <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
                                 </td>
                             </tr>
                         `;
