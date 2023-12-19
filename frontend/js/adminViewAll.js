@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
             appointmentsTableBody2.innerHTML = ''; // Clear previous content
             console.log("content: ", data);
 
+<<<<<<< Updated upstream
             const itemsPerPage = 10; // Adjust the number of items per page as needed
             let currentPage = 1;
 
@@ -56,6 +57,48 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
 
                 document.getElementById('currentPage').innerText = currentPage;
+=======
+            if (data.successful && data.appointments && data.appointments.length > 0) {
+                data.appointments.forEach(appointment => {
+                    // Shorten the note and check if it's not empty or blank
+                    const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
+                    const viewNoteButton = (appointment.note.trim() !== '') ? `<button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>` : '';
+
+                    // Conditionally show/hide buttons based on status
+                    const cancelBtn = (appointment.status === 'Ongoing') ? `<button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">Cancel</button>` : '';
+                    const finishBtn = (appointment.status === 'Ongoing') ? `<button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>` : '';
+                    const deleteBtn = (appointment.status === 'Finished' || appointment.status === 'Canceled') ? `<button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">Delete</button>` : '';
+
+                    // Append a new row for each appointment
+                    appointmentsTableBody2.innerHTML += `
+                        <tr>
+                            <td>${appointment.ref_no}</td>
+                            <td>${appointment.suffix}</td>
+                            <td>${appointment.first_name}</td>
+                            <td>${appointment.middle_name}</td>
+                            <td>${appointment.last_name}</td>
+                            <td>${appointment.contact_no}</td>
+                            <td>${appointment.email}</td>
+                            <td>${appointment.date}</td>
+                            <td>${appointment.time}</td>
+                            <td>${appointment.service_name}</td>
+                            <td>
+                                ${shortenedNote}
+                                ${viewNoteButton}
+                            </td>
+                            <td>
+                                ${appointment.status}
+                                ${cancelBtn}
+                                ${finishBtn}
+                                ${deleteBtn}
+                            </td>
+                        </tr>
+                    `;
+                });
+            } else {
+                // Display a message if there are no appointments
+                appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No appointments available</td></tr>';
+>>>>>>> Stashed changes
             }
 
             // Function to change the current page

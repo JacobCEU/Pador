@@ -106,8 +106,8 @@ body {
 }
 .catch-attention-text {
   position: absolute;
-    top: 50%;
-    left: 25%; 
+    top: 47%;
+    left: 10%; 
     transform: translate(-50%, -50%);
     color: #ffffff; 
     font: 400 24px "Poppins', sans-serif";
@@ -774,7 +774,33 @@ body {
     transform: translateY(0);
   }
 }
-
+.dentalimplants,
+.dentalimplant-image,
+.pain-relief2,
+.painrelief,
+.image-painrelief,
+.teeth-whitening2,
+.teethwhitening,
+.teethwhitening-image,
+.dental-bridges,
+.dental-bridges2,
+.dentalbridges,
+.dentalbridges-image,
+.veneers-text,
+.veeners-image,
+.toothfillings,
+.toothfilling-image,
+.consultation-text,
+.consultation-image,
+.dentalsurgery,
+.dental-bridges2,
+.dentalsurgery-image,
+.footer,
+.aboutus-button,
+.aboutus-text,
+.bookappoinment-container,
+.padordoingoperation,
+.catch-attention-text,
 .learn-more-about-us2,
 .services2,
 .dental-implants2,
@@ -784,7 +810,8 @@ body {
 .veneers2,
 .tooth-filling2,
 .dental-surgery2,
-.consultation2 {
+.consultation2
+ {
   animation: fadeInUp 2s forwards; 
 }
 
