@@ -182,8 +182,8 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
-  left: 72px;
-  top: 53px;
+  left: 73px;
+  top: 83px;
   font-size: 12px;
   padding-left: 4px;
 }
@@ -234,9 +234,9 @@ body {
   font-weight: 400;
   opacity: 0.8999999761581421;
   position: absolute;
-  left: 350px;
+  left: 76px;
   top: 117px;
-  width: 235px;
+  width: 231px;
 }
 
 .firstname,
@@ -255,7 +255,7 @@ body {
       opacity: 0.8999999761581421;
       position: relative;
       left: 141px;
-      top: 32px;
+      top: 43px;
       width: 129px;
       background: rgba(132, 130, 131, 0.14);
       width: 227px;
@@ -646,6 +646,11 @@ body {
   
 
   @media (max-width: 768px)  {
+
+    .suffix{
+
+      
+    }
     .container {
       background: rgba(255, 255, 255, 0.8999999761581421);
       position: absolute;
