@@ -5,7 +5,7 @@ const database =mysql.createConnection({
     host: "localhost",
     user: "root",
     database: "pador_db",
-    port: 3306
+    port: 3307
 })
 
 const connectDB = ()=>{

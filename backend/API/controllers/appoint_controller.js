@@ -139,51 +139,67 @@ const bookAppointment = async (req, res, next) => {
 };
 
 
-const viewAppointmentByID = (req, res, next) => {
-    let ref_no = req.query.ref_no;
-    let contact_no = req.query.contact_no;
-  
-    if (!ref_no || !contact_no) {
-      res.status(500).json({
-        successful: false,
-        message: "Nothing provided",
-      });
-    } else {
-     
-    let query = `
-    SELECT first_name, last_name, middle_name, suffix, contact_no, email, date, time, service_name, ref_no, note
-    FROM appointment_tbl
-    INNER JOIN service_choice ON appointment_tbl.serviceid = service_choice.serviceid
-    WHERE ref_no = ?
-`;
-  
-      con_db.database.query(query, [ref_no, contact_no], (error, rows, result) => {
-        if (error) {
-          console.error("Error in query:", error);
-          res.status(500).json({
-            successful: false,
-            message: "Error in view query.",
-          });
-        } else {
-          if (rows.length > 0) {
-            res.status(200).json({
-              successful: true,
-              message: "Successfully get all details",
-              data: rows,
-            });
-          } else {
-            res.status(404).json({
-              successful: false,
-              message: "Reference Number doesn't exist",
-            });
-          }
-        }
-      });
-    }
-  };
+// const viewAppointmentByID = (req, res, next) => {
+//     let ref_no = req.query.ref_no;
+//     let contact_no = req.query.contact_no;
+
+//     // Function to check if the input is a valid reference number
+//     const isValidRefNo = (refNo) => /^\d{10}$/.test(refNo);
+
+//     // Function to check if the input is a valid contact number
+//     const isValidContactNo = (contactNo) => /^\d{10}$/.test(contactNo);
+
+//     if (ref_no == null || ref_no == " " || contact_no == null || contact_no == " ") {
+//         res.status(500).json({
+//             successful: false,
+//             message: "Please enter credentials",
+//         });
+//     } else if (!isValidRefNo(ref_no)) {
+//         res.status(500).json({
+//             successful: false,
+//             message: "Invalid reference number",
+//         });
+//     } else if (!isValidContactNo(contact_no)) {
+//         res.status(500).json({
+//             successful: false,
+//             message: "Invalid contact number",
+//         });
+//     } else {
+//         let query = `
+//         SELECT first_name, last_name, middle_name, suffix, contact_no, email, date, time, service_name, ref_no, note
+//         FROM appointment_tbl
+//         INNER JOIN service_choice ON appointment_tbl.serviceid = service_choice.serviceid
+//         WHERE ref_no = ?
+//     `;
+
+//         con_db.database.query(query, [ref_no, contact_no], (error, rows, result) => {
+//             if (error) {
+//                 console.error("Error in query:", error);
+//                 res.status(500).json({
+//                     successful: false,
+//                     message: "Error in view query.",
+//                 });
+//             } else {
+//                 if (rows.length > 0) {
+//                     res.status(200).json({
+//                         successful: true,
+//                         message: "Successfully get all details",
+//                         data: rows,
+//                     });
+//                 } else {
+//                     res.status(404).json({
+//                         successful: false,
+//                         message: "Reference Number doesn't exist",
+//                     });
+//                 }
+//             }
+//         });
+//     }
+// };
+
   
 
-  const searchRef = (req, res) => {
+const searchRef = (req, res) => {
     let ref_no = req.query.ref_no;
     let contact_no = req.query.contact_no;
 
@@ -210,7 +226,9 @@ const viewAppointmentByID = (req, res, next) => {
     console.log(req.query);
 
     let query = `
-        SELECT first_name, last_name, middle_name, suffix, contact_no, email, date, time, service_name, ref_no, note
+        SELECT 
+            first_name, last_name, middle_name, suffix, contact_no, email, 
+            date, time, service_name, ref_no, note, payment_status, status
         FROM appointment_tbl
         INNER JOIN service_choice ON appointment_tbl.serviceid = service_choice.serviceid
         WHERE ref_no = ? AND contact_no = ?`;
@@ -252,10 +270,6 @@ const viewAppointmentByID = (req, res, next) => {
 };
 
 
-
-
-
-
 // Function to validate email format
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -271,6 +285,6 @@ function isDateTimePastCurrent(inputDate, inputTime) {
 
 module.exports = {
     bookAppointment,
-    viewAppointmentByID,
+    //viewAppointmentByID,
     searchRef
 };
