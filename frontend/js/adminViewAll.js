@@ -36,16 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <td>${appointment.date}</td>
                                 <td>${appointment.time}</td>
                                 <td>${appointment.service_name}</td>
-                                <td>
-                                    ${shortenedNote}
-                                    <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
-                                </td>
+                                
                                 <td>
                                     ${appointment.status}
                                     <button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">
                                         ${appointment.status === 'Canceled' ? 'Delete' : 'Cancel'}
                                     </button>
                                     <button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>
+                                </td>
+                                <td>
+                                    ${shortenedNote}
+                                    <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
                                 </td>
                             </tr>
                         `;

@@ -123,6 +123,12 @@ body {
   .column h3 {
     margin-bottom: 5px;
   }
+  .pagination {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    gap: 10px;
+}
 
   /* logout style button */
 
