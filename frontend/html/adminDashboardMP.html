@@ -39,7 +39,7 @@
     <div id="main">
         <span class="menu-text" onclick="openNav()">☰ Admin</span><br><br>
 
-        <!-- option1 Status of all finished appointments upcomming appointments and available spots -->
+        <!-- TODAY SECTION -->
         <div class="content-section" id="content1">
             <h2 class="todaytxt">Today's</h2>
             <h3 class="apptxt">Appointment</h3>
@@ -63,7 +63,7 @@
             </table>
         </div>
 
-        <!-- side bar option 3 (status) -->
+        <!-- STATUS SECTION -->
         <div class="content-section" id="content3">
             <h3 class="apptxt">Appointment Status</h3>
 
@@ -92,8 +92,10 @@
 
         </div>
 
-        <!-- side bar option 4 -->
+        <!-- VIEW ALL SECTION -->
         <div class="content-section" id="content4">
+            <input type="text" id="searchInput" placeholder="Search...">
+            <button onclick="performSearch()">Search</button>
           
             <table>
                 <tr>
@@ -145,6 +147,7 @@
                 window.location.href = '../html/adminLogin.html';
             }
         });
+        
     </script>
 </body>
 
