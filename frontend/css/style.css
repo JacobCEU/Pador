@@ -589,8 +589,8 @@ body {
   .asterisk{
     position: absolute;
     color: red;
-    top: 188px;
-    left: 305px;
+    top: 106px;
+    left: 579px;
     font-size: 20px;
   }
 
@@ -649,7 +649,7 @@ body {
 
     .suffix{
 
-      
+      top: 59px;
     }
     .container {
       background: rgba(255, 255, 255, 0.8999999761581421);
@@ -886,7 +886,7 @@ body {
     .asterisk{
       position: absolute;
       color: red;
-      top: 253px;
+      top: 209px;
       left: 305px;
       font-size: 20px;
     }
@@ -894,7 +894,7 @@ body {
     .asterisk1{
       position: absolute;
       color: red;
-      top: 309px;
+      top: 307px;
       left: 306px;
       font-size: 20px;
     }
