@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
     // Fetch data from the server
     let url = 'http://localhost:8000/admin/viewAll';
     fetch(url)
@@ -12,9 +15,6 @@ document.addEventListener('DOMContentLoaded', function () {
             // Function to update the table content based on the current page and search term
             function updateTableContent() {
                 appointmentsTableBody2.innerHTML = ''; // Clear previous content
-
-                const itemsPerPage = 10; // Adjust the number of items per page as needed
-                let currentPage = 1;
 
                 const startIndex = (currentPage - 1) * itemsPerPage;
                 const endIndex = startIndex + itemsPerPage;
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // Function to change the current page
             window.changePage = function (change) {
                 const newPage = currentPage + change;
-
+            
                 if (newPage > 0 && newPage <= Math.ceil(filteredAppointments.length / itemsPerPage)) {
                     currentPage = newPage;
                     updateTableContent();

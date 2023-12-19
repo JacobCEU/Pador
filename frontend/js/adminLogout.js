@@ -1,7 +1,10 @@
+const { response } = require("express");
+
 function logoutUser() {
-    // Implement your logout logic here
-    // For example, you might want to clear session/local storage or make an API call to log out the user.
-    // After that, redirect the user to the login page or the desired destination.
+    // Clear the adminToken from session storage
+    sessionStorage.removeItem('adminToken', response.adminToken);
+
+    // Redirect the user to the login page
     console.log("User logged out"); // Placeholder message
     window.location.href = '../html/adminLogin.html';
 }
