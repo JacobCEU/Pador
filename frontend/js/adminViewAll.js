@@ -8,41 +8,67 @@ document.addEventListener('DOMContentLoaded', function () {
             appointmentsTableBody2.innerHTML = ''; // Clear previous content
             console.log("content: ", data);
 
-            if (data.successful && data.appointments && data.appointments.length > 0) {
-                data.appointments.forEach(appointment => {
-                    // Shorten the note and append a new row for each appointment
-                    const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
+            const itemsPerPage = 10; // Adjust the number of items per page as needed
+            let currentPage = 1;
 
-                    appointmentsTableBody2.innerHTML += `
-                        <tr>
-                            <td>${appointment.ref_no}</td>
-                            <td>${appointment.suffix}</td>
-                            <td>${appointment.first_name}</td>
-                            <td>${appointment.middle_name}</td>
-                            <td>${appointment.last_name}</td>
-                            <td>${appointment.contact_no}</td>
-                            <td>${appointment.email}</td>
-                            <td>${appointment.date}</td>
-                            <td>${appointment.time}</td>
-                            <td>${appointment.service_name}</td>
-                            <td>
-                                ${shortenedNote}
-                                <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
-                            </td>
-                            <td>
-                                ${appointment.status}
-                                <button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">
-                                    ${appointment.status === 'Canceled' ? 'Delete' : 'Cancel'}
-                                </button>
-                                <button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>
-                            </td>
-                        </tr>
-                    `;
-                });
-            } else {
-                // Display a message if there are no appointments
-                appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No appointments available</td></tr>';
+            // Function to update the table content based on the current page
+            function updateTableContent() {
+                const startIndex = (currentPage - 1) * itemsPerPage;
+                const endIndex = startIndex + itemsPerPage;
+                const displayedAppointments = data.appointments.slice(startIndex, endIndex);
+
+                appointmentsTableBody2.innerHTML = ''; // Clear previous content
+
+                if (displayedAppointments.length > 0) {
+                    displayedAppointments.forEach(appointment => {
+                        // Shorten the note and append a new row for each appointment
+                        const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
+
+                        appointmentsTableBody2.innerHTML += `
+                            <tr>
+                                <td>${appointment.ref_no}</td>
+                                <td>${appointment.suffix}</td>
+                                <td>${appointment.first_name}</td>
+                                <td>${appointment.middle_name}</td>
+                                <td>${appointment.last_name}</td>
+                                <td>${appointment.contact_no}</td>
+                                <td>${appointment.email}</td>
+                                <td>${appointment.date}</td>
+                                <td>${appointment.time}</td>
+                                <td>${appointment.service_name}</td>
+                                <td>
+                                    ${shortenedNote}
+                                    <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
+                                </td>
+                                <td>
+                                    ${appointment.status}
+                                    <button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">
+                                        ${appointment.status === 'Canceled' ? 'Delete' : 'Cancel'}
+                                    </button>
+                                    <button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                } else {
+                    appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No appointments available</td></tr>';
+                }
+
+                document.getElementById('currentPage').innerText = currentPage;
             }
+
+            // Function to change the current page
+            window.changePage = function (change) {
+                const newPage = currentPage + change;
+
+                if (newPage > 0 && newPage <= Math.ceil(data.appointments.length / itemsPerPage)) {
+                    currentPage = newPage;
+                    updateTableContent();
+                }
+            };
+
+            // Initial table content update
+            updateTableContent();
         })
         .catch(error => {
             console.error('Error:', error);
