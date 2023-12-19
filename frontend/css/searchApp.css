@@ -127,6 +127,31 @@ body {
     align-items: center;
     justify-content: flex-start;
 }
+
+.flagimage{
+  
+  margin-left: -260px;
+
+
+}
+
+._63{
+
+padding-left: 129px;
+padding-top: 153px;
+
+}
+
+.flag{
+position: absolute;
+left: 91px;
+top: 207px;
+
+}
+
+
+
+
 @media only screen and (min-width: 768px) {
     .frame-20 {
         background: #ffffff;
