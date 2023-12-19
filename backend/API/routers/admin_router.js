@@ -2,12 +2,13 @@ const express = require('express')
 const adminController = require('../controllers/admin_controller')
 const adminRouter = express.Router()
 
-adminRouter.post('/adminLogin', adminController.adminLogin)
-adminRouter.post('/addAdmin', adminController.addAdmin)
-adminRouter.get('/viewToday', adminController.viewToday)
-adminRouter.get('/viewAll', adminController.viewAll)
+adminRouter.post('/adminLogin', adminController.adminLogin);
+adminRouter.post('/addAdmin', adminController.addAdmin);
+adminRouter.get('/viewToday', adminController.viewToday);
+adminRouter.get('/viewAll', adminController.viewAll);
 adminRouter.get('/countAppointments', adminController.countAppointmentsByStatus);
 adminRouter.put('/finish/:ref_no', adminController.finishAppointment);
+adminRouter.put('/payStatus/:ref_no', adminController.updatePaymentStatus);
 
 // For Details and Cancel/Delete buttons
 adminRouter.get('/viewSelected/:ref_no', adminController.viewSelected)

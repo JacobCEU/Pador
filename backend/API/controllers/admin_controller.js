@@ -78,7 +78,7 @@ const adminLogin = async (req, res, next) => {
             });
         }
 
-        let searchQuery = 'SELECT password FROM admin_tbl WHERE username = ?';
+        let searchQuery = 'SELECT password, name as adminName FROM admin_tbl WHERE username = ?';
         con_db.database.query(searchQuery, [username], async (err, rows) => {
             if (err) {
                 return res.status(500).json({
@@ -90,22 +90,24 @@ const adminLogin = async (req, res, next) => {
             if (rows.length === 0) {
                 return res.status(401).json({
                     successful: false,
-                    message: 'Incorrect username',
+                    message: 'Incorrect username or password',
                 });
             }
 
             let storedPassword = rows[0].password;
+            let adminName = rows[0].adminName; // Update variable name to match the query
+
             let isPasswordMatched = await bcrypt.compare(password, storedPassword);
 
             if (isPasswordMatched) {
                 return res.status(200).json({
                     successful: true,
-                    message: 'Logged in successfully',
+                    message: `Logged in successfully, Welcome: ${adminName}`,
                 });
             } else {
                 return res.status(401).json({
                     successful: false,
-                    message: 'Incorrect password',
+                    message: 'Incorrect username or password',
                 });
             }
         });
@@ -116,6 +118,7 @@ const adminLogin = async (req, res, next) => {
         });
     }
 };
+
 
 const viewAll = async (req, res, next) => {
     try {
@@ -396,7 +399,8 @@ const countAppointmentsByStatus = async (req, res, next) => {
         const countQuery = `
             SELECT 
                 (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Finished') as finishedCount,
-                (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Ongoing') as ongoingCount
+                (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Ongoing') as ongoingCount,
+                (SELECT COUNT(*) FROM appointment_tbl WHERE status = 'Canceled') as canceledCount
         `;
 
         con_db.database.query(countQuery, (err, rows) => {
@@ -411,6 +415,7 @@ const countAppointmentsByStatus = async (req, res, next) => {
                 successful: true,
                 finishedCount: rows[0].finishedCount,
                 ongoingCount: rows[0].ongoingCount,
+                canceledCount: rows[0].canceledCount
             };
 
             return res.status(200).json(result);
@@ -422,6 +427,7 @@ const countAppointmentsByStatus = async (req, res, next) => {
         });
     }
 };
+
 
 const finishAppointment = async (req, res, next) => {
     try {
@@ -455,6 +461,66 @@ const finishAppointment = async (req, res, next) => {
     }
 };
 
+const updatePaymentStatus = async (req, res, next) => {
+    try {
+        const refNo = req.params.ref_no;
+
+        // Check if the appointment exists
+        const checkQuery = `
+            SELECT payment_status
+            FROM appointment_tbl
+            WHERE ref_no = ?
+        `;
+
+        con_db.database.query(checkQuery, [refNo], (err, rows) => {
+            if (err) {
+                return res.status(500).json({
+                    successful: false,
+                    message: '1Internal Server Error',
+                });
+            }
+
+            if (rows.length === 0) {
+                return res.status(404).json({
+                    successful: false,
+                    message: 'Appointment not found',
+                });
+            }
+
+            const currentPaymentStatus = rows[0].payment_status;
+
+            // Update payment_status to Paid if it's Unpaid, and vice versa
+            const newPaymentStatus = currentPaymentStatus === 'Unpaid' ? 'Paid' : 'Unpaid';
+
+            // Update payment_status in the database
+            const updateQuery = `
+                UPDATE appointment_tbl
+                SET payment_status = ?
+                WHERE ref_no = ?
+            `;
+
+            con_db.database.query(updateQuery, [newPaymentStatus, refNo], (err) => {
+                if (err) {
+                    return res.status(500).json({
+                        successful: false,
+                        message: 'Internal Server Error',
+                    });
+                }
+
+                return res.status(200).json({
+                    successful: true,
+                    message: `Payment status updated to ${newPaymentStatus} successfully`,
+                });
+            });
+        });
+    } catch (error) {
+        return res.status(500).json({
+            successful: false,
+            message: 'Internal Server Error',
+        });
+    }
+};
+
 
 // Function to format time
 const formatTime = (timeString) => {
@@ -472,5 +538,6 @@ module.exports = {
     viewSelected,
     countAppointmentsByStatus,
     finishAppointment,
-    cancelAppointment
+    cancelAppointment,
+    updatePaymentStatus
 };

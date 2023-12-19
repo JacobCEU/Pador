@@ -23,7 +23,7 @@
         <!-- Option 0: Image with Name -->
         <div class="adminName">
             <img src="../img/admindp.png" alt="adminName"><br>
-            <span>Admin</span><br>
+            <span id="adminNameSpan">Admin</span><br>
         </div>
         <br><br>
 
@@ -69,7 +69,7 @@
 
             <!-- Box containing Status content -->
             <div class="horizontal-box">
-                <h3>Finished Appointments today</h3>
+                <h3>Finished Appointments</h3>
                 <div class="FinishedApps" id="finishedApps">
                     <!-- Number of finished appointment will be populated -->
                 </div>
@@ -81,6 +81,15 @@
                     <!-- Number of Upcoming/Ongoing appointment will be populated -->
                 </div>
             </div>
+
+            <!-- Add a new div for Canceled Appointments -->
+            <div class="horizontal-box">
+                <h3>Canceled Appointments</h3>
+                <div class="CanceledApps" id="canceledApps">
+                    <!-- Number of Canceled appointments will be populated -->
+                </div>
+            </div>
+
         </div>
 
         <!-- side bar option 4 -->
@@ -113,6 +122,7 @@
                 <button onclick="changePage(1)">Next</button>
               </div>
         </div>
+<<<<<<< Updated upstream
         
 
         <script src="../js/sidebar.js"></script>
@@ -121,8 +131,28 @@
         <script src="../js/appsToday.js"></script>
         <script src="../js/adminViewAll.js"></script>
         <script src="../js/appStatus.js"></script>
+=======
+>>>>>>> Stashed changes
     </div>
 
+    <script src="../js/sidebar.js"></script>
+    <script src="../js/dateToday.js"></script>
+    <script src="../js/adminLogout.js"></script>
+    <script src="../js/appsToday.js"></script>
+    <script src="../js/adminViewAll.js"></script>
+    <script src="../js/appStatus.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Check if the admin token is present in session storage
+            const adminToken = sessionStorage.getItem('adminToken');
+    
+            if (!adminToken) {
+                // Redirect to the login page if not authenticated
+                window.location.href = '../html/adminLogin.html';
+            }
+        });
+    </script>
 </body>
 
 </html>
