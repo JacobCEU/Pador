@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     appointment.last_name.toLowerCase().includes(searchTerm) ||
                     appointment.contact_no.toLowerCase() === searchTerm ||
                     appointment.status.toLowerCase().includes(searchTerm) ||
+                    appointment.service_name.toLowerCase().includes(searchTerm) ||
                     appointment.date.toLowerCase() === searchTerm ||
                     appointment.payment_status.toLowerCase() === searchTerm
                     // ... (add more fields as needed for searching)
