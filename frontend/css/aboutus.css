@@ -247,6 +247,7 @@ body {
   position: relative;
   width: 754px;
   height: 497px;
+  left: 12px;
 }
 .aboutuspic2{
   margin-right: 36px;
@@ -308,7 +309,7 @@ body {
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(520px);
+    transform: translateY(1520px);
   }
   100% {
     opacity: 1;
@@ -316,9 +317,9 @@ body {
   }
 }
 
-.animated{
+.animated, .aboutustext, .padorabout5, .visiontext, .padorabout2, .missiontext, .Padorslocation{
 
-  animation: fadeInUp 2s forwards; /* Apply the same animation to these classes */
+  animation: fadeInUp 2s forwards;
 }
 
 
