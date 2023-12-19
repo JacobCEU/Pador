@@ -64,6 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     // Display a message if there are no matching appointments
                     appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No matching appointments</td></tr>';
                 }
+
+                // Update the displayed current page in the HTML
+                document.getElementById('currentPage').innerText = currentPage;
             }
 
             // Function to perform the search
@@ -93,9 +96,10 @@ document.addEventListener('DOMContentLoaded', function () {
             // Function to change the current page
             window.changePage = function (change) {
                 const newPage = currentPage + change;
-            
+
                 if (newPage > 0 && newPage <= Math.ceil(filteredAppointments.length / itemsPerPage)) {
                     currentPage = newPage;
+                    console.log('Current Page:', currentPage); // Add this line for debugging
                     updateTableContent();
                 }
             };
@@ -143,6 +147,9 @@ function cancelAppointment(refNo, currentStatus) {
             console.error('Error:', error);
         });
 }
+
+
+
 
 // Function to finish an appointment
 function finishAppointment(refNo) {
