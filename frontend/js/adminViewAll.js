@@ -23,13 +23,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     displayedAppointments.forEach(appointment => {
                         // Shorten the note and check if it's not empty or blank
                         const shortenedNote = (appointment.note.length > 10) ? (appointment.note.substring(0, 10) + '...') : appointment.note;
-                        const viewNoteButton = (appointment.note.trim() !== '') ? `<button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>` : '';
-
+                        
                         // Conditionally show/hide buttons based on status
                         const cancelBtn = (appointment.status === 'Ongoing') ? `<button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">Cancel</button>` : '';
                         const finishBtn = (appointment.status === 'Ongoing') ? `<button class="finishBtn" onclick="finishAppointment('${appointment.ref_no}')">Finish</button>` : '';
                         const deleteBtn = (appointment.status === 'Finished' || appointment.status === 'Canceled') ? `<button class="cancelBtn" onclick="confirmCancel('${appointment.ref_no}', '${appointment.status}')">Delete</button>` : '';
-
+                        
+                        // Conditionally show/hide the View Note button
+                        const viewNoteButton = (appointment.note.trim() !== '') ? `<button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>` : '';
+                    
                         // Append a new row for each appointment
                         appointmentsTableBody2.innerHTML += `
                             <tr>
@@ -43,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <td>${appointment.date}</td>
                                 <td>${appointment.time}</td>
                                 <td>${appointment.service_name}</td>
+                                <td>${appointment.payment_status}</td>
                                 <td>
                                     ${shortenedNote}
                                     ${viewNoteButton}
@@ -53,10 +56,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                     ${cancelBtn}
                                     ${finishBtn}
                                     ${deleteBtn}
-                                </td>
-                                <td>
-                                    ${shortenedNote}
-                                    <button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>
                                 </td>
                             </tr>
                         `;
