@@ -182,8 +182,8 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
-  left: 75px;
-  top: 38px;
+  left: 72px;
+  top: 53px;
   font-size: 12px;
   padding-left: 4px;
 }
@@ -222,8 +222,8 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
-  left: 100px;
-  top: 40px;
+  left: 347px;
+  top: 121px;
   font-size: 12px;
 }
 .middlename {
@@ -235,7 +235,7 @@ body {
   opacity: 0.8999999761581421;
   position: absolute;
   left: 350px;
-  top: 105px;
+  top: 117px;
   width: 235px;
 }
 
@@ -277,7 +277,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   opacity: 0.8999999761581421;
-  width: 227px;
+  width: 233px;
   height: 45px;
 }
 .flagimage,
@@ -583,6 +583,64 @@ body {
   .suffix::placeholder {
     left: 13px;
   }
+
+  .asterisk{
+    position: absolute;
+    color: red;
+    top: 188px;
+    left: 305px;
+    font-size: 20px;
+  }
+
+  .asterisk1{
+    position: absolute;
+    color: red;
+    top: 188px;
+    left: 582px;
+    font-size: 20px;
+  }
+  .asterisk2{
+    position: absolute;
+    color: red;
+    left: 308px;
+    top: 271px;
+    font-size: 20px;
+  }
+
+  .asterisk3{
+
+    position: absolute;
+    color: red;
+    left: 313px;
+    top: 360px;
+    font-size: 20px;
+
+
+  }
+
+  .asterisk4{
+
+    position: absolute;
+    color: red;
+    left: 577px;
+    top: 359px;
+    font-size: 20px;
+
+  }
+  .asterisk5{
+
+    position: absolute;
+    color: red;
+    left: 315px;
+    top: 441px;
+    font-size: 20px;
+
+
+
+  }
+
+  
+
   
 
   @media (max-width: 768px)  {
@@ -818,4 +876,60 @@ body {
       padding-top: 75px; /* Decrease padding for smaller screens */
       
     }
+    .asterisk{
+      position: absolute;
+      color: red;
+      top: 253px;
+      left: 305px;
+      font-size: 20px;
+    }
+  
+    .asterisk1{
+      position: absolute;
+      color: red;
+      top: 309px;
+      left: 306px;
+      font-size: 20px;
+    }
+
+    .asterisk2{
+      position: absolute;
+      color: red;
+      top: 593px;
+      left: 308px;
+      font-size: 20px;
+    }
+    .asterisk3{
+
+      position: absolute;
+      color: red;
+      top: 427px;
+      left: 304px;
+      font-size: 20px;
+    }
+    .asterisk4{
+
+      position: absolute;
+      color: red;
+      left: 306px;
+      top: 481px;
+      font-size: 20px;
+  
+  
+  
+    }
+
+    .asterisk5{
+
+      position: absolute;
+      color: red;
+      left: 305px;
+      top: 542px;
+      font-size: 20px;
+
+
+
+    }
+  
+    
   }
