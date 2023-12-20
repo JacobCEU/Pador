@@ -33,6 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Conditionally show/hide the View Note button
                         const viewNoteButton = (appointment.note.trim() !== '') ? `<button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>` : '';
 
+                        // Add a button to toggle payment status
+                        const togglePaymentStatusBtn = `<button class="togglePaymentStatusBtn" onclick="togglePaymentStatus('${appointment.ref_no}', '${appointment.payment_status}')">${getPaymentStatusToggleLabel(appointment.payment_status)}</button>`;
+
                         // Append a new row for each appointment
                         appointmentsTableBody2.innerHTML += `
                             <tr>
@@ -57,12 +60,13 @@ document.addEventListener('DOMContentLoaded', function () {
                                     ${finishBtn}
                                     ${deleteBtn}
                                 </td>
+                                <td>${togglePaymentStatusBtn}</td>
                             </tr>
                         `;
                     });
                 } else {
                     // Display a message if there are no matching appointments
-                    appointmentsTableBody2.innerHTML = '<tr><td colspan="11">No matching appointments</td></tr>';
+                    appointmentsTableBody2.innerHTML = '<tr><td colspan="13">No matching appointments</td></tr>';
                 }
 
                 // Update the displayed current page in the HTML
