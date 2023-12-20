@@ -1,10 +1,10 @@
-const appoint_model = (ref_id, ref_no, serviceid,first_name,last_name, suffix, middle_name,contact_no,email,date,time,note)=>{
+const appoint_model = (ref_id, ref_no, bank_id,serviceid,first_name,last_name, suffix, middle_name,contact_no,email,date,time,note)=>{
 
     let Appoint = {
         ref_id: ref_id,
         ref_no: ref_no,
+        bank_id: bank_id,
         serviceid: serviceid,
-        bank_id:bank_id,
         first_name: first_name,
         last_name: last_name,
         suffix: suffix,

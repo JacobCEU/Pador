@@ -15,7 +15,7 @@ const paycard = async (req, res) => {
 
     // Fetch the serviceid and payment_status from appointment_tbl
     const fetchQuery = `
-        SELECT serviceid, payment_status
+        SELECT serviceid, payment_status, amount
         FROM appointment_tbl
         WHERE ref_no = ?;
     `;
@@ -36,7 +36,7 @@ const paycard = async (req, res) => {
             });
         }
 
-        const { serviceid, payment_status } = rows[0];
+        const { serviceid, payment_status, amount } = rows[0];
 
         if (payment_status !== 'Unpaid') {
             return res.status(400).json({
@@ -69,6 +69,14 @@ const paycard = async (req, res) => {
             }
 
             const serviceCost = serviceRows[0].price;
+
+            // Check if the amount is sufficient to cover the service cost
+            if (amount < serviceCost) {
+                return res.status(400).json({
+                    successful: false,
+                    message: "Payment unsuccessful. Insufficient funds."
+                });
+            }
 
             // Perform the deduction in the appointment_tbl and set payment_status to 'Paid'
             const updateQuery = `
@@ -107,4 +115,5 @@ const paycard = async (req, res) => {
 module.exports = {
     paycard
 };
+
 

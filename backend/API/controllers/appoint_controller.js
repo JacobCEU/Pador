@@ -3,22 +3,15 @@ const con_db = require('../models/con_db');
 const bookAppointment = async (req, res, next) => {
     let first_name = req.body.first_name;
     let last_name = req.body.last_name;
-    let middle_name = req.body.middle_name || 'n/a'; 
-    let suffix = req.body.suffix || 'n/a'; 
+    let middle_name = req.body.middle_name || 'n/a';
+    let suffix = req.body.suffix || 'n/a';
     let contact_no = req.body.contact_no;
-    let email = req.body.email || 'n/a'; 
+    let email = req.body.email || 'n/a';
     let date = req.body.date;
     let time = req.body.time;
     let serviceid = req.body.serviceid;
+    let bank_id = req.body.bank_id;
     let note = req.body.note;
-
-    // Add validation for required fields
-    if (!first_name || !last_name || !contact_no || !date || !time || !serviceid) {
-        return res.status(400).json({
-            successful: false,
-            message: "Required fields* cannot be empty."
-        });
-    }
 
     // Validate Philippines phone number format
     const philippinePhoneNumberRegex = /^9\d{9}$/;
@@ -59,6 +52,7 @@ const bookAppointment = async (req, res, next) => {
         });
     }
 
+    // Proceed with your existing code to insert the new appointment
     let Appoint = {
         first_name: first_name,
         last_name: last_name,
@@ -69,55 +63,45 @@ const bookAppointment = async (req, res, next) => {
         date: date,
         time: time,
         serviceid: serviceid,
+        bank_id: bank_id,
         note: note
     };
-    
+
     let query = `
         INSERT INTO appointment_tbl
-        (first_name, last_name, middle_name, suffix, contact_no, email, date, time, serviceid, note)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`;
+        (bank_id, serviceid, first_name, last_name, middle_name, suffix, contact_no, email, date, time, note)
+        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    `;
 
-        console.log('Query:', query);
-        console.log('Parameters:', [
-            Appoint.first_name,
-            Appoint.last_name,
-            Appoint.suffix,
-            Appoint.middle_name,
-            Appoint.contact_no,
-            Appoint.email,
-            Appoint.date,
-            Appoint.time,
-            Appoint.serviceid,
-            Appoint.note
-        ]);
-
-        con_db.database.query(query, [
-            Appoint.first_name,
-            Appoint.last_name,
-            Appoint.suffix,
-            Appoint.middle_name,
-            Appoint.contact_no,
-            Appoint.email,
-            Appoint.date,
-            Appoint.time,
-            Appoint.serviceid,
-            Appoint.note
-        ], (error, result) => {
+    con_db.database.query(query, [
+        Appoint.bank_id,
+        Appoint.serviceid,
+        Appoint.first_name,
+        Appoint.last_name,
+        Appoint.middle_name,
+        Appoint.suffix,
+        Appoint.contact_no,
+        Appoint.email,
+        Appoint.date,
+        Appoint.time,
+        Appoint.note
+    ], (error, result) => {
         if (error) {
             console.error('Database Error:', error);
             res.status(500).json({
                 successful: false,
-                message: "Error in query."
+                message: "Error in query.",
+                error: error.message
             });
         } else {
             const ref_id = result.insertId;
             const date = Appoint.date.replace(/-/g, '');
 
-            const customRefNo = `${ref_id}${date}`
+            const customRefNo = `${ref_id}${date}`;
 
             let customRefQuery = `UPDATE appointment_tbl
-            SET ref_no = ${customRefNo}
-            WHERE ref_id = ${ref_id};`;
+                SET ref_no = ${customRefNo}
+                WHERE ref_id = ${ref_id};`;
 
             con_db.database.query(customRefQuery, [customRefNo, ref_id], (updateError) => {
                 if (updateError) {
@@ -137,6 +121,7 @@ const bookAppointment = async (req, res, next) => {
         }
     });
 };
+
 
 
 // const viewAppointmentByID = (req, res, next) => {
@@ -196,8 +181,6 @@ const bookAppointment = async (req, res, next) => {
 //         });
 //     }
 // };
-
-  
 
 const searchRef = (req, res) => {
     let ref_no = req.query.ref_no;
@@ -269,7 +252,6 @@ const searchRef = (req, res) => {
     });
 };
 
-
 // Function to validate email format
 function isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -285,6 +267,6 @@ function isDateTimePastCurrent(inputDate, inputTime) {
 
 module.exports = {
     bookAppointment,
-    //viewAppointmentByID,
+    // viewAppointmentByID,
     searchRef
 };

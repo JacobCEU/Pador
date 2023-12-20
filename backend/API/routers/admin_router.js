@@ -14,4 +14,5 @@ adminRouter.put('/payStatus/:ref_no', adminController.updatePaymentStatus);
 adminRouter.get('/viewSelected/:ref_no', adminController.viewSelected)
 adminRouter.delete('/cancelAppointment/:ref_no', adminController.cancelAppointment)
 
+
 module.exports = adminRouter

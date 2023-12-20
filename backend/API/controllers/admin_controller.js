@@ -124,7 +124,7 @@ const viewAll = async (req, res, next) => {
     try {
         // Query to retrieve appointments for today
         const query = `
-            SELECT a.ref_no, a.suffix, a.first_name, a.middle_name, a.last_name, a.contact_no, a.email, a.date, a.time, a.serviceid, a.note, a.status, a.payment_status, sc.service_name
+            SELECT a.ref_no, a.suffix, a.first_name, a.middle_name, a.last_name, a.contact_no, a.email, a.date, a.time, a.serviceid, a.note, a.status, a.payment_status, sc.service_name, sc.price
             FROM appointment_tbl a
             INNER JOIN service_choice sc ON a.serviceid = sc.serviceid
         `;
@@ -157,6 +157,9 @@ const viewAll = async (req, res, next) => {
                     hour12: true,
                 });
 
+                // Calculate the total price based on service price
+                const price = appointment.price || 0;
+
                 return {
                     status: appointment.status,
                     note: appointment.note,
@@ -171,6 +174,7 @@ const viewAll = async (req, res, next) => {
                     last_name: appointment.last_name,
                     suffix: appointment.suffix,
                     payment_status: appointment.payment_status,
+                    price: price,
                 };
             });
 
@@ -187,7 +191,6 @@ const viewAll = async (req, res, next) => {
         });
     }
 };
-
 
 
 
