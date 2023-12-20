@@ -8,6 +8,7 @@ db.connectDB()
 
 let appointRouter = require('./API/routers/appoint_router');
 let adminRouter = require('./API/routers/admin_router');
+let paymentRouter = require('./API/routers/payment_router');
 //LIST OF ALL DEPENDENCIES: END
 
 //DEPENDENCY MIDDLEWARES: START
@@ -29,6 +30,7 @@ app.use((req, res, next) => {
 });
 app.use('/appoint', appointRouter)
 app.use('/admin', adminRouter)
+app.use('/payment', paymentRouter)
 // app.use('/sections', sectionRouter)
 
 //ERROR MIDDLEWARE : START

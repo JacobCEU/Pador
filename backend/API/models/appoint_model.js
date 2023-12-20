@@ -4,6 +4,7 @@ const appoint_model = (ref_id, ref_no, serviceid,first_name,last_name, suffix, m
         ref_id: ref_id,
         ref_no: ref_no,
         serviceid: serviceid,
+        bank_id:bank_id,
         first_name: first_name,
         last_name: last_name,
         suffix: suffix,
@@ -12,7 +13,8 @@ const appoint_model = (ref_id, ref_no, serviceid,first_name,last_name, suffix, m
         email: email,
         date: date,
         time: time,
-        note: note
+        note: note,
+        amount: amount
     }
     
     return Appoint
