@@ -1,6 +1,15 @@
 function clientInfo() {
-    // Create the payload
+    // Get the selected payment method
+    let paymentMethod = document.getElementById("payment-required").value;
 
+    // Validate if the payment method is not selected
+    if (paymentMethod === "") {
+        // Display an alert message
+        alert("Please select payment method");
+        return; // Stop further processing
+    }
+
+    // Create the payload
     let payload = {
         first_name: document.getElementById("firstName").value,
         last_name: document.getElementById("lastName").value,
@@ -11,7 +20,8 @@ function clientInfo() {
         date: document.getElementById("preferredAppointmentDate").value,
         time: document.getElementById("preferredAppointmentTime").value,
         serviceid: document.getElementById("serviceRequired").value,
-        note: document.getElementById("note").value
+        note: document.getElementById("note").value,
+        payment_method: paymentMethod
     };
 
     // Log the values for validation using payload properties
@@ -25,6 +35,7 @@ function clientInfo() {
     console.log("Client Info - Time:", payload.time);
     console.log("Client Info - Service ID:", payload.serviceid);
     console.log("Client Info - Note:", payload.note);
+    console.log("Client Info - Payment Method:", payload.payment_method);
 
     // Log the payload for validation
     console.log("Payload:", payload);
@@ -33,8 +44,7 @@ function clientInfo() {
     submitAppointment(payload, payload.contact_no);
 }
 
-
-function api_client( url, content, callback) {
+function api_client(url, content, callback) {
     console.log('URL:', url);
     console.log('Content:', content)
 
@@ -44,7 +54,7 @@ function api_client( url, content, callback) {
         .catch(error => console.error('Error:', error));
 }
 
-function submitAppointment(payload){
+function submitAppointment(payload) {
     console.log("Payload:", payload);
     let contact_no = payload.contact_no;
     let url = "http://localhost:8000/appoint/bookAppointment"
@@ -69,4 +79,3 @@ function submitAppointment(payload){
         }
     })
 }
-

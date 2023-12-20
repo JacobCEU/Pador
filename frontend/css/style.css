@@ -641,6 +641,35 @@ body {
 
   }
 
+  .asterisk6{
+
+    position: absolute;
+    color: red;
+    left: 580px;
+    top: 442px;
+    font-size: 20px;
+  }
+
+  .payment-method{
+
+
+    position: absolute;
+    right: 11px;
+    top: 12px;
+  }
+
+  .payment {
+    position: absolute;
+    top: 438px;
+    left: -296px;
+    font-family: "Poppins-Regular", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    opacity: 0.8999999761581421;
+    width: 235px;
+    height: 44px;
+    box-sizing: border-box;
+  }
   
 
   
