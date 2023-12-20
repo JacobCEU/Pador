@@ -52,73 +52,103 @@ const bookAppointment = async (req, res, next) => {
         });
     }
 
-    // Proceed with your existing code to insert the new appointment
-    let Appoint = {
-        first_name: first_name,
-        last_name: last_name,
-        suffix: suffix,
-        middle_name: middle_name,
-        contact_no: contact_no,
-        email: email,
-        date: date,
-        time: time,
-        serviceid: serviceid,
-        bank_id: bank_id,
-        note: note
-    };
-
-    let query = `
-        INSERT INTO appointment_tbl
-        (bank_id, serviceid, first_name, last_name, middle_name, suffix, contact_no, email, date, time, note)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+    // Check if there's an existing appointment with the same email
+    const existingAppointmentQuery = `
+        SELECT amount
+        FROM appointment_tbl
+        WHERE email = ? AND payment_status = 'Unpaid'
+        ORDER BY ref_id DESC
+        LIMIT 1;
     `;
 
-    con_db.database.query(query, [
-        Appoint.bank_id,
-        Appoint.serviceid,
-        Appoint.first_name,
-        Appoint.last_name,
-        Appoint.middle_name,
-        Appoint.suffix,
-        Appoint.contact_no,
-        Appoint.email,
-        Appoint.date,
-        Appoint.time,
-        Appoint.note
-    ], (error, result) => {
+    con_db.database.query(existingAppointmentQuery, [email], (error, existingRows) => {
         if (error) {
             console.error('Database Error:', error);
-            res.status(500).json({
+            return res.status(500).json({
                 successful: false,
                 message: "Error in query.",
                 error: error.message
             });
-        } else {
-            const ref_id = result.insertId;
-            const date = Appoint.date.replace(/-/g, '');
-
-            const customRefNo = `${ref_id}${date}`;
-
-            let customRefQuery = `UPDATE appointment_tbl
-                SET ref_no = ${customRefNo}
-                WHERE ref_id = ${ref_id};`;
-
-            con_db.database.query(customRefQuery, [customRefNo, ref_id], (updateError) => {
-                if (updateError) {
-                    console.error('Database Update Error:', updateError);
-                    res.status(500).json({
-                        successful: false,
-                        message: "Error updating ref_no in the database."
-                    });
-                } else {
-                    res.status(200).json({
-                        successful: true,
-                        message: "Successfully booked an appointment",
-                        ref_no: customRefNo
-                    });
-                }
-            });
         }
+
+        // Use the amount from the existing appointment or set it to 100000
+        let existingAmount;
+        if (existingRows.length > 0) {
+            existingAmount = existingRows[0].amount;
+        } else {
+            existingAmount = 100000;
+        }
+
+        // Proceed with your existing code to insert the new appointment
+        let Appoint = {
+            first_name: first_name,
+            last_name: last_name,
+            suffix: suffix,
+            middle_name: middle_name,
+            contact_no: contact_no,
+            email: email,
+            date: date,
+            time: time,
+            serviceid: serviceid,
+            bank_id: bank_id,
+            note: note,
+            amount: existingAmount // Set the amount based on existing or default to 100000
+        };
+        
+        let query = `
+            INSERT INTO appointment_tbl
+            (bank_id, serviceid, first_name, last_name, middle_name, suffix, contact_no, email, date, time, note, amount)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);
+        `;
+        
+        con_db.database.query(query, [
+            Appoint.bank_id,
+            Appoint.serviceid,
+            Appoint.first_name,
+            Appoint.last_name,
+            Appoint.middle_name,
+            Appoint.suffix,
+            Appoint.contact_no,
+            Appoint.email,
+            Appoint.date,
+            Appoint.time,
+            Appoint.note,
+            Appoint.amount
+        ], (error, result) => {
+            if (error) {
+                console.error('Database Error:', error);
+                res.status(500).json({
+                    successful: false,
+                    message: "Error in query.",
+                    error: error.message
+                });
+            } else {
+                const ref_id = result.insertId;
+                const date = Appoint.date.replace(/-/g, '');
+        
+                const customRefNo = `${ref_id}${date}`;
+        
+                let customRefQuery = `UPDATE appointment_tbl
+                    SET ref_no = ${customRefNo}
+                    WHERE ref_id = ${ref_id};`;
+        
+                con_db.database.query(customRefQuery, [customRefNo, ref_id], (updateError) => {
+                    if (updateError) {
+                        console.error('Database Update Error:', updateError);
+                        res.status(500).json({
+                            successful: false,
+                            message: "Error updating ref_no in the database."
+                        });
+                    } else {
+                        res.status(200).json({
+                            successful: true,
+                            message: "Successfully booked an appointment",
+                            ref_no: customRefNo
+                        });
+                    }
+                });
+            }
+        });
     });
 };
 
