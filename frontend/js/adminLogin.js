@@ -1,18 +1,13 @@
 function loginAdminInfo() {
-    // Create the payload
     let payload = {
         username: document.getElementById("username").value,
         password: document.getElementById("password").value
     };
 
-    // Log the values for validation using payload properties
     console.log("admin Info - user:", payload.username);
     console.log("admin Info - password:", payload.password);
-
-    // Log the payload for validation
     console.log("Payload:", payload);
 
-    // Submit the login
     submitLogin(payload);
 }
 
@@ -42,10 +37,10 @@ function submitLogin(payload) {
         if (response.successful == true) {
             alert(response.message);
             sessionStorage.setItem('adminToken', response.adminToken);
-
             window.location.href = "../html/adminDashboardMP.html";
         } else {
             alert(response.message);
         }
     });
 }
+

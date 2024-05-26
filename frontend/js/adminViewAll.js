@@ -5,8 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Fetch data from the server
     let url = 'http://localhost:8000/admin/viewAll';
     fetch(url)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log('Fetched Data:', data); // Log the fetched data
+
             const appointmentsTableBody2 = document.getElementById('appointmentsTableBody2');
             const searchInput = document.getElementById('searchInput');
 
@@ -33,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         // Conditionally show/hide the View Note button
                         const viewNoteButton = (appointment.note.trim() !== '') ? `<button class="viewNoteBtn" onclick="viewNote('${appointment.note}')">View Note</button>` : '';
 
-                        // Add a button to toggle payment status
-                        const togglePaymentStatusBtn = `<button class="togglePaymentStatusBtn" onclick="togglePaymentStatus('${appointment.ref_no}', '${appointment.payment_status}')">${getPaymentStatusToggleLabel(appointment.payment_status)}</button>`;
-
                         // Append a new row for each appointment
                         appointmentsTableBody2.innerHTML += `
                             <tr>
@@ -60,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function () {
                                     ${finishBtn}
                                     ${deleteBtn}
                                 </td>
-                                <td>${togglePaymentStatusBtn}</td>
                             </tr>
                         `;
                     });
@@ -152,9 +155,6 @@ function cancelAppointment(refNo, currentStatus) {
             console.error('Error:', error);
         });
 }
-
-
-
 
 // Function to finish an appointment
 function finishAppointment(refNo) {
