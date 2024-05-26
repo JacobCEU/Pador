@@ -1,5 +1,4 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
     <head>
       <!-- Required meta tags -->
@@ -37,9 +36,10 @@
                     </div>
                     <div class="navbar-nav ml-auto">
     
-                        <a class="nav-link" href="homepage.html">Home</a>
-                        <a class="nav-link" href="appointForm.html">Book Appointment</a>
-                        <a class="nav-link" href="#about_us">About us</a>
+                        <a class="nav-link2" href="homepage.html">Home</a>
+                        <a class="nav-link2" href="appointForm.html">Book Appointment</a>
+                        <a class="nav-link2" href="aboutus.html">About us</a>
+                    </div>
             </nav>
         </header>
         <div class="image-pador">
@@ -47,94 +47,111 @@
             <div class="container text-center">
                 <h2>BOOK AN APPOINTMENT</h2>
 
-            
+    
             <form action="#" method="POST" onsubmit="clientInfo()">
+                
+                    
+                    <div>
+                    <input type="text" class="middlename" id="middleName" name="middlename" placeholder="Suffix *Jr, Sr, III">
+                </div>
+                <div class="firstname">
+                    <input type="text" class="first-name" id="firstName" name="firstName" placeholder="First Name">
+                </div>
                 <div class="row">
-                    <div class = "all-textbox"></div>
-                    <input type="text" class="suffix" id="suffix" name="suffix" placeholder="Suffix *Jr, Sr, III">
-                        
-                      
-        </div>
+                    <div class="all-textbox"></div>
+                    <input type="text" class="suffix" id="suffix" name="suffix" placeholder="Middle Name">
+                    </div>
+                    
 
-        
-
-        <div class="firstname">
-            <input type="text" class="first-name" id="firstName" name="firstName" placeholder="Firt Name">
-        </div>
         <div class="lastname">
-            <input type="text" class="last-name" id="lastName" name="lastName" placeholder="Last Name">
-          </div>
+            <input type="text" class="last-name" id="lastName" name="lastName" placeholder=" Last Name ">
+        </div>
+
+
         <div class="flagimage">
             <img class="flag" src="../img/Flag.png" />
             <div class="_63">+63</div>
           </div>
 
           <div class="contactnumber">
-            <input type="tel" class="number" id="contactNumber" name="contactNumber" required>
+            <input type="tel" class="number" id="contactNumber" name="contactNumber" placeholder="9123456789">
           </div>
           <div class="email">
-            <input type="email" class="emailtextbox" id="email" name="email">
-            <div class="e-g-test-gmail-com">e.g. test@gmail.com</div>
-            
+            <input type="email" class="emailtextbox" id="email" name="email" placeholder="e.g. test@gmail.com">
           </div>
 
-          <div class="preferred-appointment-date">
-            
-               
+
+                <div class="preferred-appointment-date">
                     <input type="date" class="calendardate" id="preferredAppointmentDate" name="preferredAppointmentDate" required>
                 </div>
-            
-        
-            <div class="preferred-appointment-time">
-                <input type="time" class="time" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
-            </div>
-        
-          <div class="service">
-            
-            <select class="service2" id="serviceRequired" name="serviceRequired" required>
-                <option value="" disabled selected>Select a service</option>
-                <option value=1>Dental Bridges</option>
-                <option value=2>Teeth Whitening</option>
-                <option value=3>Cleaning</option>
-                <option value=4>Pain Relief</option>
-            </select>
+
+                <div class="preferred-appointment-time">
+                    <input type="time" class="time" id="preferredAppointmentTime" name="preferredAppointmentTime" required>
+                </div>
+
+
+                <b class="asterisk">*</b>
+                <b class="asterisk1">*</b>
+                <b class="asterisk2">*</b>
+                <b class="asterisk3">*</b>
+                <b class="asterisk4">*</b>
+                <b class="asterisk5">*</b>
+
+
+
+
+
+
+                <div class="service">
+                    <select class="service2" id="serviceRequired" name="serviceRequired" required>
+                        <option value="" disabled selected>Select a service </option> 
+                        <option value=1>Dental Implants</option>
+                        <option value=2>Pain Relief</option>
+                        <option value=3>Teeth Whitening</option>
+                        <option value=4>Dental Bridges</option>
+                        <option value=5>Veneers</option>
+                        <option value=6>Tooth Filling</option>
+                        <option value=7>Consultation</option>
+                        <option value=8>Dental Surgery</option>
+                    </select>
+                </div>
+
+                <div class="notetextbox">
+                    <textarea type="text" class="notes" id="note" name="note" rows="3"></textarea>
+                </div>
+
+                <div id="submit" type="button" onclick="clientInfo()" class="submit center">
+                    <div class="submit2">
+                        <div class="body">Submit</div>
+                    </div>
+                </div>
+                <div class="text">
+                    For more inquiries or cancellation of an appointment, please contact us or
+                    visit us at our clinic
+                </div>
+            </form>
         </div>
+    </div>
 
-          <div class="notetextbox">
-            <textarea type="text" class="notes" id="note" name="note" rows="3"></textarea>
-          </div>
-
-
-          <div id="submit" type="button"  onclick="clientInfo()" class="submit center">
-            <div class="submit2">
-              <div class="body">Submit</div>
-            </div>
-          </div>
-          <div class="text">
-            For more inquiries or cancellation of an appointment, please contact us or
-            visit us at our clinic
-            </div>
-
-
-           </div>
-           
-
+    
         
     
         </body>
 
-        <footer class="footer bg-footer">
-
-         
+        <div class="footer">
+          <p>Contact: +63 94567896210</p>
+          <p>Address: 3275 A. Mabini St, Barangay Poblacion. Makati City</p>
+          <p>&copy; Copyright 2023 Pador’s Dental Clinic</p>
+        </div>
     
-        </footer> 
+       
       
 
 
-      
-      <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
 
-      
-    
-  </html>
+    <script src="../js/appoint.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</html>
+`

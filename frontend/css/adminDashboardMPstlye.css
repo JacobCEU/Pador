@@ -52,6 +52,7 @@ body {
   .content-section.active {
     display: block;
   }
+  
 
   .option0{
     padding-left: 5%;
@@ -87,14 +88,17 @@ body {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: left;
+    font-family: "Poppins-Regular";
   }
 
   th {
-    background-color: #f2f2f2;
+    background: rgba(3, 137, 214, 0.511);
   }
 
   .view-all-btn {
     float: right;
+    padding-bottom: 10px;
+    padding-top: 10px;
   }
 
   .upper-part {
@@ -119,6 +123,12 @@ body {
   .column h3 {
     margin-bottom: 5px;
   }
+  .pagination {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    gap: 10px;
+}
 
   /* logout style button */
 
@@ -149,5 +159,75 @@ body {
 
 .viewapptxt{
     font-size: 40px;
+}
+
+/* Add these styles for status colors */
+select.finish {
+  background-color: rgb(13, 200, 13);
+  color: white;
+}
+
+select.ongoing {
+  background-color: yellow;
+  color: black;
+}
+
+select.waiting {
+  background-color: rgb(108, 209, 243);
+  color: white;
+}
+
+
+/* Initial button styles */
+button.cancel-btn {
+  background-color: white;
+  color: orange;
+  transition: background-color 0.3s ease;
+}
+
+button.delete-btn {
+  background-color: white;
+  color: red;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover styles */
+button.cancel-btn:hover {
+  background-color: orange;
+  color: white;
+}
+
+button.delete-btn:hover {
+  background-color: red;
+  color: white;
+}
+
+.adminName{
+  padding-left: 35px;
+}
+
+ /* CSS for the hover animation */
+ span.menu-text {
+  font-size: 30px;
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* Apply the hover animation styles */
+span.menu-text:hover {
+  transform: translateX(10px); /* Adjust the value to control the slide distance */
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Apply the hover animation styles */
+a:hover {
+  transform: translateX(-10px); /* Adjust the value to control the slide distance */
 }
 

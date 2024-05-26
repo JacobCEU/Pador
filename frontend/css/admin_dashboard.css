@@ -2,6 +2,7 @@
 
     margin: 0;
     padding: 0;
+  
     
 
 
@@ -11,8 +12,24 @@ body{
 
     display: flex;
     overflow: auto;
+    
 }
-
+.mainrec{
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    position: relative;
+    right: 165px;
+}
+.tworectangle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  right: 909px;
+  /* gap: 188px; */
+  /* gap: 10rem; */
+  align-content: center;
+}
 
 .square{
 
@@ -21,12 +38,12 @@ height: 450px;
 flex-shrink: 0;
 background: rgba(2, 128, 199, 0.6);
 
-
-
-
-
-
 }
+
+
+
+
+
 
 .logo{
 width: 154px;
@@ -39,10 +56,9 @@ border-radius: 8px;
 }
 
 .pador{
-
     float: left;
-    padding-top: 50px;
-    padding-left: 20px;
+    padding-top: 20px;
+    margin-left: 250px;
     width: 306px;
     color: #FFF;
     font-family: Suez One;
@@ -116,7 +132,7 @@ border-radius: 8px;
         position: relative;
         overflow: visible;
         margin-top: 25px;
-        margin-right: 18px;
+        margin-right: 10px;
     }
 
 
@@ -143,19 +159,18 @@ border-radius: 8px;
 
 
     .rectangle-32 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 390px;
-        margin-left: 456px;
-        
-      }
+      background: #ffffff;
+      border-radius: 20px;
+      border-style: solid;
+      border-color: #8c8c8c;
+      border-width: 1px;
+      width: 451px;
+      height: 195px;
+      position: absolute;
+      box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+      margin-top: 390px;
+      left: 550px;
+  }
 
       .finished-appointments-today {
         color: #4a4a4a;
@@ -180,19 +195,18 @@ border-radius: 8px;
       }
 
       
+
     .rectangle-39 {
         background: #ffffff;
         border-radius: 20px;
         border-style: solid;
         border-color: #8c8c8c;
         border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
+        width: 1000px;
+        height: 400px;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 390px;
-        margin-right: 456px;
-        right: 0;
+        margin-top: 50px;
+        margin-left: 5px;
         
       }
 
@@ -231,13 +245,14 @@ border-radius: 8px;
         border-width: 1px;
         width: 451px;
         height: 195px;
-        position: absolute;
+        position: relative;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 644px;
-        margin-right: 733px;
-        margin-left: 456px;
-        left: 0;
-      }
+        margin-top: 632px;
+        /* margin-right: 1215px; */
+        /* margin-left: -427px; */
+        left: 45px;
+        /* right: 88px; */
+    }
       
       .available-spots-left-today{
 
@@ -266,20 +281,19 @@ border-radius: 8px;
       }
 
       .rectangle-38 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 644px;
-        margin-right: 456px;
-        margin-left: 256px;
-        right: 0;
-      }
+    background: #ffffff;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: #8c8c8c;
+    border-width: 1px;
+    width: 451px;
+    height: 195px;
+    position: absolute;
+    box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+    margin-top: 644px;
+    top: -10px;
+    right: 517px;
+}
       
       .upcoming-appointments{
 
@@ -309,13 +323,13 @@ border-radius: 8px;
       }
 
 
-      .rectangle-37 {
+      .todayDisplay {
         background: #ffffff;
         border-radius: 20px;
         border-style: solid;
         border-color: #adacac;
         border-width: 1px;
-        width: 957px;
+        width: 1100px;
         height: 582px;
         position: absolute;
         box-shadow: 5px 5px 4px 0px rgba(116, 116, 116, 0.25);
@@ -333,7 +347,7 @@ border-radius: 8px;
         margin-top: 19px;
       }
 
-      .base-chip {
+      .base-button {
         display: flex;
         flex-direction: row;
         gap: 0px;
@@ -343,7 +357,8 @@ border-radius: 8px;
         margin-left: 707px;
         margin-top: -30px;
       }
-      .base-chip2 {
+
+      .base-button .button-container {
         background: #0280c7;
         border-radius: 20px;
         padding: 0px 12px 0px 12px;
@@ -356,7 +371,23 @@ border-radius: 8px;
         width: 179px;
         height: 34px;
         position: relative;
+        cursor: pointer; /* Add cursor style for interaction */
+        transition: background-color 0.3s ease; /* Add transition for smooth color change */
+      }
 
+      /* Style for the button text */
+      .base-button .button-container .body {
+          color: #fff; /* Set text color to white or your preferred color */
+      }
+
+      /* Hover effect */
+      .base-button .button-container:hover {
+          background: #036aa7; /* Change background color on hover */
+      }
+
+      /* Click effect */
+      .base-button .button-container:active {
+          background: #01446b; /* Change background color on click */
       }
       .body {
         color: #ffffff;
@@ -368,13 +399,27 @@ border-radius: 8px;
         justify-content: flex-start;
       }
 
+      .columns{
+        
+      }
+
+      .name {
+        color: #4a4a4a;
+        text-align: left;
+        font: 400 30px "Poppins-Regular", sans-serif;
+        position: relative;
+        padding-left: 20px;
+        top: 20px;
+      }
+
+
 
       .time {
         color: #4a4a4a;
         text-align: left;
         font: 400 30px "Poppins-Regular", sans-serif;
         position: relative;
-        padding-left: 128px;
+        padding-left: 200px;
         top: 17px;
 
       }
@@ -484,6 +529,13 @@ border-radius: 8px;
 
 
 
+      }
+
+      #logoutButton{
+
+
+        position: absolute;
+        right: 355px;
       }
 
       
@@ -597,8 +649,9 @@ border-radius: 8px;
 
         position: absolute;
         right: 0;
-        margin-top: 18px;
-        margin-right: 16px;
+        margin-top: 15px;
+        right: -370px;
+        
 
 
         
@@ -663,8 +716,8 @@ border-radius: 8px;
             height: 195px;
             position: absolute;
             box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-            margin-top: 390px;
-            margin-left: 25px;
+            margin-top: 420px;
+            margin-left: 275px;
             
           }
     
@@ -699,21 +752,15 @@ border-radius: 8px;
 
 
     @media screen and (max-width: 1000px) {
-    .rectangle-39 {
-        background: #ffffff;
-        border-radius: 20px;
-        border-style: solid;
-        border-color: #8c8c8c;
-        border-width: 1px;
-        width: 451px;
-        height: 195px;
-        position: absolute;
-        box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 600px;
-        left: 25px;
-       
-        
+      .rectangle-39 {
+          width: 451px; /* Adjust the width */
+          height: 225px; /* Adjust the height */
+          position: absolute;
+          box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
+          margin-top: 600px;
+          left: 25px;
       }
+    
 
       .notifications {
         color: #4a4a4a;
@@ -806,7 +853,7 @@ border-radius: 8px;
         height: 195px;
         position: absolute;
         box-shadow: 5px 5px 4px 0px rgba(150, 147, 147, 0.25);
-        margin-top: 1031px;
+        margin-top: 681px;
         margin-right: 209px;
         margin-left: 25px;
         left: 0;
@@ -840,6 +887,13 @@ border-radius: 8px;
       }
 
     }
+
+    .logoutButton{
+
+      left: 0px;
+
+
+    }
       
 
 
@@ -851,7 +905,7 @@ border-radius: 8px;
     @media screen and (max-width: 1000px) {
 
 
-    .rectangle-37 {
+    .todayDisplay {
       background: #ffffff;
       border-radius: 20px;
       border-style: solid;
@@ -1033,6 +1087,10 @@ border-radius: 8px;
     }
 
   }
+
+  #today .today label {
+    font-size: 2.5em;
+}
 
 
 

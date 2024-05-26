@@ -16,17 +16,31 @@
     background: rgba(2, 128, 199, 0.30000001192092896);
     
   }
-  .navbar-nav .nav-link {
-    color: #ffffff; 
-}
-
+  
   .logo{
     height: 90px;
     margin-left: 5px
     
   
     }
+    .nav-link2 {
+      color: white;
+  }
+  .first-name,.middlename,.last-name,.emailtextbox,.calendardate,.emailtextbox,.number,.suffix::placeholder {
+   padding-left: 10px;
+}
+  .image-pador2{
+    
+      margin-top: 115px;
   
+  }
+  .nav-nav, .ml-auto{
+  display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 16px;
+  }
   
   .desktop-1 {
       background: #ffffff;
@@ -169,8 +183,9 @@ body {
   position: relative;
   overflow: hidden;
   left: 73px;
-  top: 40px;
+  top: 83px;
   font-size: 12px;
+  padding-left: 4px;
 }
 .suffixes {
   color: #4a4a4a;
@@ -197,27 +212,56 @@ body {
   width: 193px;
 }
 
+.middlename,
+.middlename * {
+  box-sizing: border-box;
+}
+.middlename {
+  background: rgba(132, 130, 131, 0.14);
+  width: 227px;
+  height: 45px;
+  position: relative;
+  overflow: hidden;
+  left: 347px;
+  top: 121px;
+  font-size: 12px;
+}
+.middlename {
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: absolute;
+  left: 76px;
+  top: 117px;
+  width: 231px;
+}
+
 .firstname,
 .firstname * {
   box-sizing: border-box;
 }
 
 
-  .first-name {
-    color: #4a4a4a;
-    text-align: left;
-    font-family: "Poppins-Regular", sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    opacity: 0.8999999761581421;
-    position: relative;
-    left: -134px;
-    top: 80px;
-    width: 129px;
-    background: rgba(132, 130, 131, 0.14);
-    width: 227px;
-    height: 45px;
-}
+  
+    .first-name {
+      color: #4a4a4a;
+      text-align: left;
+      font-family: "Poppins-Regular", sans-serif;
+      font-size: 12px;
+      font-weight: 400;
+      opacity: 0.8999999761581421;
+      position: relative;
+      left: 141px;
+      top: 43px;
+      width: 129px;
+      background: rgba(132, 130, 131, 0.14);
+      width: 227px;
+      height: 45px;
+  }
+
 .lastname,
 .lastname * {
   box-sizing: border-box;
@@ -235,7 +279,7 @@ body {
   font-size: 12px;
   font-weight: 400;
   opacity: 0.8999999761581421;
-  width: 227px;
+  width: 233px;
   height: 45px;
 }
 .flagimage,
@@ -259,7 +303,7 @@ body {
   height: 27px;
   position: absolute;
   left: 6px;
-  top: 13px;
+  top: 10px;
 }
 ._63 {
   color: #4a4a4a;
@@ -270,7 +314,7 @@ body {
   opacity: 0.8999999761581421;
   position: absolute;
   left: 38px;
-  top: 17px;
+  top: 14px;
   width: 37px;
   height: 23px;
 }
@@ -283,7 +327,7 @@ body {
 
 .number {
   background: rgba(132, 130, 131, 0.14);
-  color: rgba(74, 74, 74, 0.25);
+  color: rgb(0, 0, 0);
   text-align: left;
   font-family: "Poppins-Regular", sans-serif;
   font-size: 16px;
@@ -291,7 +335,7 @@ body {
   opacity: 0.8999999761581421;
   position: relative;
   right: 90px;
-  top: 17px;
+  top: 19px;
   width: 145px;
   height: 46px;
 }
@@ -305,6 +349,7 @@ body {
   height: 45px;
   position: relative;
   overflow: hidden;
+  top: -3px;
   
 }
 .email {
@@ -346,7 +391,7 @@ body {
 }
 .calendardate {
   
-  width: 227px;
+  width: 237px;
   height: 45px;
   position: relative;
   overflow: hidden;
@@ -380,6 +425,7 @@ body {
   left:330px;
   top:350px;
   background: rgba(132, 130, 131, 0.14);
+  padding-left: 4px;
 }
 .preferred-appointment-time {
   
@@ -409,7 +455,7 @@ body {
 }
 .service2 {
   background: rgba(132, 130, 131, 0.14);
-  width: 243.93px;
+  width: 237.93px;
   height: 45.82px;
   position: relative;
   overflow: hidden;
@@ -459,6 +505,7 @@ body {
   top: 18px;
   width: 530px;
   height: 159px;
+  padding-left: 7px;
 }
 
 .submit,
@@ -482,7 +529,7 @@ body {
 .submit2 {
   background: #0280c7;
   border-radius: 20px;
-  padding: 0px 12px 0px 12px;
+  padding: 2px 15px 1px 13px;
   display: flex;
   flex-direction: row;
   gap: 6px;
@@ -490,7 +537,7 @@ body {
   justify-content: center;
   flex-shrink: 0;
   width: 179px;
-  height: 34px;
+  height: 33px;
   position: relative;
 }
 .body {
@@ -514,15 +561,16 @@ body {
   color: #fe0000;
   text-align: left;
   font-family: "Poppins-Regular", sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   opacity: 0.8999999761581421;
   position: relative;
-  width: 538px;
+  width: 494px;
   height: 74px;
-  left: 40px;
-  top: 290px;
+  left: 72px;
+  top: 296px;
   text-align: center;
+  max-width: 80%;
 }
 
 .footer {
@@ -534,7 +582,75 @@ body {
     width: 100%; 
   }
 
+  .suffix::placeholder {
+    left: 13px;
+  }
+
+  .asterisk{
+    position: absolute;
+    color: red;
+    top: 106px;
+    left: 579px;
+    font-size: 20px;
+  }
+
+  .asterisk1{
+    position: absolute;
+    color: red;
+    top: 188px;
+    left: 582px;
+    font-size: 20px;
+  }
+  .asterisk2{
+    position: absolute;
+    color: red;
+    left: 308px;
+    top: 271px;
+    font-size: 20px;
+  }
+
+  .asterisk3{
+
+    position: absolute;
+    color: red;
+    left: 313px;
+    top: 360px;
+    font-size: 20px;
+
+
+  }
+
+  .asterisk4{
+
+    position: absolute;
+    color: red;
+    left: 577px;
+    top: 359px;
+    font-size: 20px;
+
+  }
+  .asterisk5{
+
+    position: absolute;
+    color: red;
+    left: 315px;
+    top: 441px;
+    font-size: 20px;
+
+
+
+  }
+
+  
+
+  
+
   @media (max-width: 768px)  {
+
+    .suffix{
+
+      top: 59px;
+    }
     .container {
       background: rgba(255, 255, 255, 0.8999999761581421);
       position: absolute;
@@ -569,6 +685,20 @@ body {
     width: 227px;
     height: 45px;
 }
+.middlename {
+  background: rgba(132, 130, 131, 0.14);
+  color: #4a4a4a;
+  text-align: left;
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.8999999761581421;
+  position: relative;
+  left: -5px;
+  top: 54px;
+  width: 230px;
+  height: 43px;
+}
 .last-name {
   background: rgba(132, 130, 131, 0.14);
   color: #4a4a4a;
@@ -592,7 +722,7 @@ body {
   position: relative;
   overflow: hidden;
   left: 59px;
-  top: 80px;
+  top: 134px;
   border-color: black;
   border: solid;
   border-width: thin;
@@ -607,9 +737,10 @@ body {
   opacity: 0.8999999761581421;
   position: relative;
   right: -36px;
-  top: 30px;
+  top: 85px;
   width: 145px;
-  height: 46px;
+  height: 48px;
+  margin-top: -2px;
 }
 .email {
   background: rgba(132, 130, 131, 0.14);
@@ -621,7 +752,7 @@ body {
   position: absolute;
   left: 78px;
   bottom: 632px;
-  bottom: 492px;
+  bottom: 506px;
 }
 .emailtextbox {
   background: rgba(132, 130, 131, 0.14);
@@ -631,12 +762,12 @@ body {
   overflow: hidden;
 }
 .calendardate {
-  width: 227px;
+  width: 229px;
   height: 45px;
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 350px;
+  top: 391px;
   background: rgba(132, 130, 131, 0.14);
 }
 .time {
@@ -645,7 +776,7 @@ body {
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 490px;
+  top: 529px;
   background: rgba(132, 130, 131, 0.14);
 }
 .preferred-appointment-date {
@@ -676,22 +807,22 @@ body {
 }
 .service2 {
   background: rgba(132, 130, 131, 0.14);
-  width: 243.93px;
+  width: 230.93px;
   height: 45.82px;
   position: relative;
   overflow: hidden;
   left: 60px;
-  top: 30px;
+  top: 68px;
   font-family: "Poppins-Regular", sans-serif;
 }
 .notetextbox {
   background: rgba(132, 130, 131, 0.14);
   width: 372px;
-  height: 159px;
+  height: 119px;
   position: relative;
   overflow: hidden;
   left: -12px;
-  top: 283px;
+  top: 281px;
 }
 
 .notes {
@@ -704,10 +835,9 @@ body {
   opacity: 0.8999999761581421;
   left: 15px;
   top: 18px;
-  width: 372px;
-  height: 159px;
+  width: 368px;
+  height: 118px;
 }
-
 .submit {
   display: flex;
   flex-direction: row;
@@ -733,9 +863,80 @@ body {
   width: 494px;
   height: 74px;
   left: 40px;
-  top: 348px;
+  top: 328px;
   text-align: center;
   max-width: 80%;
 }
   }
   
+  .footer {
+    background: linear-gradient(180deg, rgba(58, 156, 211, 0.00) 0%, rgba(12, 63, 201, 0.73) 74.06%, rgba(18, 27, 75, 0.82) 100%);
+    padding: 20px;
+    color: black;
+  
+    text-align: center;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    /* Adjust styles for smaller screens (e.g., mobile phones) */
+    .footer {
+      padding-top: 75px; /* Decrease padding for smaller screens */
+      
+    }
+    .asterisk{
+      position: absolute;
+      color: red;
+      top: 209px;
+      left: 305px;
+      font-size: 20px;
+    }
+  
+    .asterisk1{
+      position: absolute;
+      color: red;
+      top: 307px;
+      left: 306px;
+      font-size: 20px;
+    }
+
+    .asterisk2{
+      position: absolute;
+      color: red;
+      top: 593px;
+      left: 308px;
+      font-size: 20px;
+    }
+    .asterisk3{
+
+      position: absolute;
+      color: red;
+      top: 427px;
+      left: 304px;
+      font-size: 20px;
+    }
+    .asterisk4{
+
+      position: absolute;
+      color: red;
+      left: 306px;
+      top: 481px;
+      font-size: 20px;
+  
+  
+  
+    }
+
+    .asterisk5{
+
+      position: absolute;
+      color: red;
+      left: 305px;
+      top: 542px;
+      font-size: 20px;
+
+
+
+    }
+  
+    
+  }

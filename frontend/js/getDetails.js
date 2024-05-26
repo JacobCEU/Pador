@@ -5,7 +5,7 @@ const contact_no = urlParams.get('contact_no');
 if (!ref_no) {
   console.error('Error: Missing ref_no in URL parameters');
 } else {
-  let url = `http://localhost:8000/appoint/appointment?ref_no=${ref_no}&contact_no=${contact_no}`;
+  let url = `http://localhost:8000/appoint/searchAppointment?ref_no=${ref_no}&contact_no=${contact_no}`;
   fetchInfo(url);
 }
 
@@ -31,10 +31,12 @@ function api_client(url, content, callback) {
     })
     .then(data => {
       console.log('Data from server:', data);
+      console.log('Details from server:', data.data);
       const detailsDiv = document.getElementById("details");
-      const details = data.data[0];
+      const details = data.data;
 
-      console.log(details);
+      console.log('Details: ', details);
+      console.log('Details Div:', detailsDiv);
 
       if (details) {
         detailsDiv.innerHTML = `
@@ -82,10 +84,17 @@ function api_client(url, content, callback) {
  
                   <label for="note">Note:</label>
                   <div id="note">${details.note}</div>
+
+                  <label for="payStatus">Payment Status:</label>
+                  <div id="payStatus"> ${details.payment_status}</div>
+ 
+                  <label for="status">Appointment status:</label>
+                  <div id="status">${details.status}</div>
               </div>
           </div>
         `;
       } else {
+        console.log('Details is empty:', details);
         detailsDiv.textContent = "Incomplete details received from the server";
       }
   })
